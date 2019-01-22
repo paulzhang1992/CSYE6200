@@ -65,24 +65,29 @@ public class weightCalculator {
 						dims [i] = scan.nextDouble();
 					}
 				}
-				//Store the data into records array
+				//Store the data into records array & shift the volume & weight data alongside
 				records = recordShift(records,dims);
 
 				System.out.println(String.format("Input success!\n1The dimension of bucket is %.2f * %.2f * %.2f",dims [0], dims [1],dims[2]));
 				
-				//Calculate volume & weight. Stored in records array.
-				vol = calcVolume(dims);
-				records = volUpdate (records,vol);
-				weight = calcWeight(dims);
-				records = weightUpdate(records,weight);
 				
 				break;
 			case '2':
 				System.out.println("You selected calculate the  cubic volume (m 3 ) of the bucket");
+				//Calculate volume. Stored in records array.
+				vol = calcVolume(dims);
+				//Update the volume in records matrix
+				records[2][3] = vol;
+				//records = volUpdate (records,vol);
 				System.out.println(String.format("The volume of current bucket is %.2f cubic meter",records[2][3]));
 				break;
 			case '3':
 				System.out.println("You selected calculate the weight");
+				//Calculate weight. Stored in records array.
+				weight = calcWeight(dims);
+				//Update the weight in records matrix
+				records[2][4] = weight;
+				//records = weightUpdate(records,weight);
 				System.out.println(String.format("The weight of current fluid is %.2f kilogram",records[2][4]));
 				break;   
 			case '4':
@@ -145,7 +150,7 @@ public class weightCalculator {
 	public double[][] recordShift (double [][] records, double [] newDim) {
 		//Shift the last two row of dimensional data up by 1
 		for (int i = 0; i < 2; i++) {
-			for (int j = 0; j<3; j++) {
+			for (int j = 0; j<5; j++) {
 				records [i][j] = records[i+1][j];
 			}
 		}
@@ -153,28 +158,34 @@ public class weightCalculator {
 		for (int j = 0; j< 3; j++) {
 			records [2][j] = newDim [j];
 		}
-		
-		return records;
-	}
-	public double[][] volUpdate (double [][] records, double volume) {
-		//Shift the last two volume data up by 1
-		for (int i = 0; i < 2; i++)
-			records [i][3] = records[i+1][3];
-		//Store the newly calculated data in last row
-		records [2][3] = volume;
-		
-		return records;
-	}
-	public double[][] weightUpdate (double [][] records, double weight) {
-		//Shift the last two weight result up by 1
-		for (int i = 0; i < 2; i++)
-			records [i][4] = records[i+1][4];
-		//Store the newly calculated weight in last row
-		records [2][4] = weight;
-		
+		//Reset the volume and weight to 0
+		records [2][3] = 0;
+		records [2][4] = 0;
 		return records;
 	}
 	
+	//Updated the record matrix updating method the following functions are commented out for now
+	
+	/*
+	*public double[][] volUpdate (double [][] records, double volume) {
+	*	//Shift the last two volume data up by 1
+	*	for (int i = 0; i < 2; i++)
+	*		records [i][3] = records[i+1][3];
+	*	//Store the newly calculated data in last row
+	*	records [2][3] = volume;
+	*	
+	*	return records;
+	*}
+	*public double[][] weightUpdate (double [][] records, double weight) {
+	*	//Shift the last two weight result up by 1
+	*	for (int i = 0; i < 2; i++)
+	*		records [i][4] = records[i+1][4];
+	*	//Store the newly calculated weight in last row
+	*	records [2][4] = weight;
+	*	
+	*	return records;
+	*}
+	*/
 
 
 
