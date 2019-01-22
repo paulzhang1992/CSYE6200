@@ -5,8 +5,6 @@ import java.util.Scanner;
 /**
  * 
  * Filename: weightCalculator.java <br>
- * 
- *  <br>
  * @author Zeyu Zhang
  */
 
