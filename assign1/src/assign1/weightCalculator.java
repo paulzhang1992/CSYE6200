@@ -6,7 +6,7 @@ import java.util.Scanner;
  * 
  * Filename: weightCalculator.java <br>
  * 
- * NUID: 001495690 <br>
+ *  <br>
  * @author Zeyu Zhang
  */
 
