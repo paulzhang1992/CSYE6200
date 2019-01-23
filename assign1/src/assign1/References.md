@@ -2,7 +2,7 @@
 
 #### CSYE6200Assign1.java example code
 
-Provided by Mr. Mark Munson.
+By Mr. Mark Munson.
 
 #### Lecture notes week 1 ans week 2
 
