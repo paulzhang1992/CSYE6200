@@ -1,23 +1,26 @@
 package assign1;
-
 import java.util.Scanner;
 
 /**
+ * A starter file for implementing CSYE 6200 Assignment 1 <br>
+ * Note: the package is 'assign1' so your code should be in your source folder under 'assign1'
+ * Filename: CSYE6200Assign1.java <br>
  * 
- * Filename: weightCalculator.java <br>
+ * NUID:  <br>
  * @author Zeyu Zhang
  */
 
-public class weightCalculator {
+
+public class CSYE6200Assign1 {
 	
 	public static void main(String args[]) throws java.io.IOException {
 		// Create an instance of the class, and call the constructor method
-		weightCalculator prog1 = new weightCalculator();
+		CSYE6200Assign1 prog1 = new CSYE6200Assign1();
 		
 		prog1.run(); 
 	}
 	
-	public weightCalculator() {
+	public CSYE6200Assign1() {
 		
 	}
 	
@@ -102,6 +105,12 @@ public class weightCalculator {
 				*		last		0		0		0		0		0
 				*	   current		0		0		0		0		0
 				*/
+				double total_vol = 0;
+				double total_weight = 0;
+				total_vol = records[0][3] + records[1][3] + records[2][3];
+				total_weight = records[0][4] + records[1][4] + records[2][4];
+				System.out.println(String.format("The total volume of last 3 records is %.2f kilogram",total_vol));
+				System.out.println(String.format("The total weight of last 3 records is %.2f kilogram",total_weight));
 				break;   
 			default:
 				System.out.println("Invalid selection: " + inChar);
