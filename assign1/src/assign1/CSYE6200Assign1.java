@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Note: the package is 'assign1' so your code should be in your source folder under 'assign1'
  * Filename: CSYE6200Assign1.java <br>
  * 
- * NUID: 001495690 <br>
+ * 
  * @author Zeyu Zhang
  */
 
