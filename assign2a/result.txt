@@ -1,0 +1,10 @@
+The output result is showm as below:
+
+         Make        Model       Power     Fuel Type    Fuel Capacity     Fuel Load     Range
+
+         Kubota      B2320       17.2       diesel          26.1            23.5        103.36
+           ford       1920       24.8       diesel          37.1            23.5         75.17
+           fiat        500       37.3       diesel          54.1            54.1        146.07
+    New Holland      T4.75       55.2       diesel          90.1            23.5         89.26
+     John Deere      3303R       24.6       diesel          44.7            44.7        232.44
+
