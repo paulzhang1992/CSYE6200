@@ -2,6 +2,7 @@ package assign2b;
 
 /**
  * @@author Zeyu Zhang
+ *
  */
 
 import java.util.ArrayList;
@@ -18,11 +19,18 @@ public class TractorTaxation {
     static private Tractor tr5 = new Tractor();
     static private Tractor tr0 = new Tractor();
 
-    int taxRate;    // tax rate dollars/1000 dollars
-    double tax;     // tax based on taxRate and price
+    // Tax rates are set to private variables to prevent unwanted changes
+    private int taxRate1;    // tax rate dollars/1000 dollars 0-5000
+    private int taxRate2;    // tax rate dollars/1000 dollars 5000 - 10000
+    private int taxRate3;    // tax rate dollars/1000 dollars 10000 - 15000
+    private int taxRate4;    // tax rate dollars/1000 dollars < 15000
+    private double tax;     // tax based on taxRate and price
 
     public TractorTaxation() {
-        taxRate = 25; // 25 dollars per 1000 value
+        taxRate1 = 25; // 25 dollars per 1000 value
+        taxRate2 = 35; // 35 dollars per 1000 value
+        taxRate3 = 50; // 50 dollars per 1000 value
+        taxRate4 = 100; // 100 dollars per 1000 value
         tax = 0;    // default set to 0
 
     }
@@ -135,11 +143,11 @@ public class TractorTaxation {
         }
         else {
 
-            System.out.println("******************************************************************     TRACTOR LIST     ******************************************************************\n");
+            System.out.println("*****************************************************     TRACTOR LIST     *****************************************************\n");
             for (Tractor tr : tractorList) {
                 System.out.println(tr);
             }
-            System.out.println("\n**********************************************************************************************************************************************************\n\n\n");
+            System.out.println("\n********************************************************************************************************************************\n\n\n");
         }
 
     }
@@ -164,13 +172,28 @@ public class TractorTaxation {
     /**
      * Tax calculator
      * @param tr tractor
-     * @return
+     * @return tax of tractor
      */
     public double estTAX (Tractor tr) {
         // Get the tractor price
-        int price = tr.getPrice();
-        // tax = price/1000 * tax rate (tax rate is dollars per thousand dollars)
-        tax = price/1000*taxRate;
+        double price = tr.getPrice();
+
+        //tax calculation with a slab system
+        //  0 - 5000   25 / 1k
+        //  5000 - 10000 35 / 1k
+        //  10000 - 15000 50 / 1k
+        //  < 15000  100 / 1k
+
+        if (price<= 5000) tax = price/1000*taxRate1;
+        else if (5000 < price & price <= 10000) tax = 5*taxRate1 + (price-5000)/1000*taxRate2;
+        else if (10000 < price & price <=15000) tax = 5*taxRate1+5*taxRate2+(price-10000)/1000*taxRate3;
+        else if (15000 < price) {
+            tax = 5 * (taxRate1 + taxRate2 + taxRate3) + (price - 15000) / 1000 * taxRate4;
+        } else {
+            tax = 0;
+            System.out.println("Tractor value error. Tax been set to 0.");
+        }
+
         return tax;
     }
 
@@ -178,12 +201,12 @@ public class TractorTaxation {
      * Print the tax form including all tractor and their tax
      */
     public void taxPrint() {
-        System.out.println("**********************************************************     TAX FORM     **********************************************************\n\n");
+        System.out.println("*******************************************************     TAX FORM     *******************************************************\n\n");
         for (Tractor tr : tractorList) {
 
             System.out.println("                        The annual tax based on tractor value for "+tr.getMake() + " "+ tr.getModel() +" is: "+tr.getTax()+" dollars\n");
         }
-        System.out.println("\n**************************************************************************************************************************************\n\n\n");
+        System.out.println("\n********************************************************************************************************************************\n\n\n");
 
     }
 
@@ -240,4 +263,5 @@ public class TractorTaxation {
 
 
     }
+
 }

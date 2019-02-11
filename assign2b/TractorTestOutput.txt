@@ -1,28 +1,27 @@
-/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -javaagent:/snap/intellij-idea-community/118/lib/idea_rt.jar=38741:/snap/intellij-idea-community/118/bin -Dfile.encoding=UTF-8 -classpath /home/paul/eclipse-workspace/assign2b/out/production/assign2b assign2b.TractorTest
-**********************************************************************************************************************************************************
+/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -javaagent:/snap/intellij-idea-community/118/lib/idea_rt.jar=33019:/snap/intellij-idea-community/118/bin -Dfile.encoding=UTF-8 -classpath /home/paul/eclipse-workspace/assign2b/out/production/assign2b assign2b.TractorTest
+********************************************************************************************************************************
 
-    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range      Price       Tractor ID    Owner
-      Kubota   B2320    17.2       diesel          26.1         23.5          4.40           103.36      16000           0          Paul 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+      Kubota   B2320    17.2       diesel          26.1         23.5          4.40           103.36   16.0k     0         Paul 
+--------------------------------------------------------------------------------------------------------------------------------
 
-    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range      Price       Tractor ID    Owner
-        ford    1920    24.8       diesel          37.1         18.0          3.20            57.60      13000           1         James 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+        ford    1920    24.8       diesel          37.1         18.0          3.20            57.60   13.0k     1        James 
+--------------------------------------------------------------------------------------------------------------------------------
 
-    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range      Price       Tractor ID    Owner
-        fiat     500    37.3       diesel          54.1         54.1          2.70           146.07       5000           2          Mark 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+        fiat     500    37.3       diesel          54.1         54.1          2.70           146.07    5.0k     2         Mark 
+--------------------------------------------------------------------------------------------------------------------------------
 
-    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range      Price       Tractor ID    Owner
- New Holland   T4.75    55.2       diesel          90.1         18.0          3.80            68.40      39000           3           Mia 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+ New Holland   T4.75    55.2       diesel          90.1         18.0          3.80            68.40   39.0k     3          Mia 
+--------------------------------------------------------------------------------------------------------------------------------
 
-    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range      Price       Tractor ID    Owner
-  John Deere   3303R    24.6       diesel          44.7         44.7          5.20           232.44      29900           4       Unknown 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+    Make       Model    Power    Fuel Type      Fuel Type    Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+  John Deere   3303R    24.6       diesel          44.7         44.7          5.20           232.44   29.9k     4      Unknown 
+--------------------------------------------------------------------------------------------------------------------------------
 
-**********************************************************************************************************************************************************
+********************************************************************************************************************************
 
 
 Process finished with exit code 0
-
