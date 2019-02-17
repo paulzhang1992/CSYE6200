@@ -1,10 +1,10 @@
 package assign3;
 
-import assign3.Tractor;
-
 import java.io.*;
-
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class TractorIO {
     String path;
@@ -55,18 +55,18 @@ public class TractorIO {
             // Write content
             if (tr instanceof FrontLoader) {
                 FrontLoader fl = (FrontLoader) tr;
-                writer.append("{\"type\": \"" + type + "\", \n\"make\": \"" + fl.getMake() + "\", \n\"model\":\"" + fl.getModel() +
+                writer.append("\"type\": \"" + type + "\", \n\"make\": \"" + fl.getMake() + "\", \n\"model\":\"" + fl.getModel() +
                         "\", \n\"power\":" + fl.getPower() + ", \n\"fuelType\":\"" + fl.getFuelType() + "\", \n\"fuelCap\":" + fl.getFuelCap() +
                         ", \n\"fuelLoad\":" + fl.getFuelLoad() + ", \n\"fuelEff\":" + fl.getFuelEff() + ", \n\"range\":" + fl.getRange() +
                         ", \n\"price\":" + fl.getPrice() + ", \n\"tractorID\":" + fl.getTractorID() + ", \n\"ownerID\":\"" + fl.getOwnerID() +
-                        ", \n\"loaderWidth\":" + fl.getLoaderWidth() + ", \n\"loaderCap\":" + fl.getLoaderCap()+"}");
+                        ", \n\"loaderWidth\":" + fl.getLoaderWidth() + ", \n\"loaderCap\":" + fl.getLoaderCap()+"|");
 
             }
             else {
-                writer.append("{\"type\": \"" + type + "\", \n\"make\": \"" + tr.getMake() + "\", \n\"model\":\"" + tr.getModel() +
+                writer.append("\"type\": \"" + type + "\", \n\"make\": \"" + tr.getMake() + "\", \n\"model\":\"" + tr.getModel() +
                         "\", \n\"power\":" + tr.getPower() + ", \n\"fuelType\":\"" + tr.getFuelType() + "\", \n\"fuelCap\":" + tr.getFuelCap() +
                         ", \n\"fuelLoad\":" + tr.getFuelLoad() + ", \n\"fuelEff\":" + tr.getFuelEff() + ", \n\"range\":" + tr.getRange() +
-                        ", \n\"price\":" + tr.getPrice() + ", \n\"tractorID\":" + tr.getTractorID() + ", \n\"ownerID\":\"" + tr.getOwnerID()+"\"}\n");
+                        ", \n\"price\":" + tr.getPrice() + ", \n\"tractorID\":" + tr.getTractorID() + ", \n\"ownerID\":\"" + tr.getOwnerID()+"\"|\n");
             }
             writer.close();
         } catch (IOException e) {
@@ -80,8 +80,44 @@ public class TractorIO {
      * @param path          file path
      * @param fileName      file name
      */
+    public String ReadFile (String path, String fileName){
+        String listOfTractor = "";
+        File file = new File(path+"\\"+fileName);
 
+        if (!file.exists()) {
+            System.out.println("File does not exist. Quitting");
+        } else {
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(file));
+                String st;
+                while ((st = br.readLine()) != null)
+                    listOfTractor += st;
+                //System.out.println(list);
 
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return listOfTractor;
+    }
+
+    public List StringToList(String st, String sp) {
+        List<String> items = Arrays.asList(st.split(sp));
+
+        return items;
+    }
+    public Tractor LoadTractor (String st) {
+        Tractor tr = new Tractor();
+
+        return tr;
+    }
+    public FrontLoader LoadFrontLoader (String st) {
+        FrontLoader fl = new FrontLoader();
+
+        return fl;
+    }
 
 
 }
+
+

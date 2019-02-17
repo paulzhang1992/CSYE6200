@@ -7,7 +7,6 @@ public class FrontLoader extends Tractor {
     double loaderWidth;     // in cm
     double loaderCap;       // in cm^3
 
-
     public FrontLoader() {
         loaderWidth = 188.0616;
         loaderCap =  120000;

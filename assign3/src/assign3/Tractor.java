@@ -159,6 +159,9 @@ public class Tractor {
         return tractorID;
     }
 
+    public void setTractorID(int tractorID) {
+        this.tractorID = tractorID;
+    }
 
     /**
      *
