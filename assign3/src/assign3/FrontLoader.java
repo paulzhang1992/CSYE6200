@@ -1,6 +1,6 @@
 package assign3;
 
-import assign3.Tractor;
+
 
 public class FrontLoader extends Tractor {
 

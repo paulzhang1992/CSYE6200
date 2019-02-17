@@ -1,10 +1,8 @@
 package assign3;
 
 import assign3.Tractor;
-import java.io.IOException;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.io.FileNotFoundException;
+
+import java.io.*;
 
 import java.io.IOException;
 
@@ -19,7 +17,12 @@ public class TractorIO {
         this.type = type;
     }
 
+    public TractorIO() {
+
+    }
+
     /**
+     *     Tractor write method. Classes have the following variables need be written.
      *     Tractor
      *     String make;	// Manufacturer
      *     String model;	// Tractor model
@@ -37,35 +40,47 @@ public class TractorIO {
      *     FrontLoader
      *     double loaderWidth;     // in cm
      *     double loaderCap;       // in cm^3
+     *
+     * @param tr        object to write
+     * @param path      file path
+     * @param fileName  file name
      */
     public void WriteFile (Tractor tr , String path, String fileName){
+        // Set type of object Tractor of FrontLoader
         if (tr instanceof FrontLoader) type = "FrontLoader";
         else type = "Tractor";
         try {
-            FileWriter writer = new FileWriter(path+"/"+fileName);
-            writer.append("[{ \"type\": \"" + type + "\", \"make\": \"" + tr.getMake() + "\", \"model\":" + tr.getModel() +
-                    "\", \"power\":" + tr.getPower() + "\", \"fuelType\":" + tr.getFuelType() + "\", \"fuelCap\":" + tr.getFuelCap() +
-                    "\", \"fuelLoad\":" + tr.getFuelLoad() + "\", \"fuelEff\":" + tr.getFuelEff() + "\", \"range\":" + tr.getRange() +
-                    "\", \"price\":" + tr.getPrice() + "\", \"tractorID\":" + tr.getTractorID() + "\", \"ownerID\":" + tr.getOwnerID());
+            // Append the the result
+            FileWriter writer = new FileWriter(path+"\\"+fileName, true);
+            // Write content
             if (tr instanceof FrontLoader) {
                 FrontLoader fl = (FrontLoader) tr;
-                writer.append( "\", \"loaderWidth\":" +  fl.getLoaderWidth() +  "\", \"loaderCap\":" + fl.getLoaderCap()+"\" }]");
-            } else {
-                writer.append("\" }]");
+                writer.append("{\"type\": \"" + type + "\", \n\"make\": \"" + fl.getMake() + "\", \n\"model\":\"" + fl.getModel() +
+                        "\", \n\"power\":" + fl.getPower() + ", \n\"fuelType\":\"" + fl.getFuelType() + "\", \n\"fuelCap\":" + fl.getFuelCap() +
+                        ", \n\"fuelLoad\":" + fl.getFuelLoad() + ", \n\"fuelEff\":" + fl.getFuelEff() + ", \n\"range\":" + fl.getRange() +
+                        ", \n\"price\":" + fl.getPrice() + ", \n\"tractorID\":" + fl.getTractorID() + ", \n\"ownerID\":\"" + fl.getOwnerID() +
+                        ", \n\"loaderWidth\":" + fl.getLoaderWidth() + ", \n\"loaderCap\":" + fl.getLoaderCap()+"}");
+
             }
-
-
-
-
+            else {
+                writer.append("{\"type\": \"" + type + "\", \n\"make\": \"" + tr.getMake() + "\", \n\"model\":\"" + tr.getModel() +
+                        "\", \n\"power\":" + tr.getPower() + ", \n\"fuelType\":\"" + tr.getFuelType() + "\", \n\"fuelCap\":" + tr.getFuelCap() +
+                        ", \n\"fuelLoad\":" + tr.getFuelLoad() + ", \n\"fuelEff\":" + tr.getFuelEff() + ", \n\"range\":" + tr.getRange() +
+                        ", \n\"price\":" + tr.getPrice() + ", \n\"tractorID\":" + tr.getTractorID() + ", \n\"ownerID\":\"" + tr.getOwnerID()+"\"}\n");
+            }
+            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
-    public void OpenFile (String path, String fileName){
+    /**
+     * Reading the file to String
+     * @param path          file path
+     * @param fileName      file name
+     */
 
-    }
 
 
 
