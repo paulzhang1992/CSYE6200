@@ -91,7 +91,7 @@ public class TractorIO {
                 BufferedReader br = new BufferedReader(new FileReader(file));
                 String st;
                 while ((st = br.readLine()) != null)
-                    listOfTractor += st;
+                listOfTractor += st;
                 //System.out.println(list);
 
             } catch (IOException e) {

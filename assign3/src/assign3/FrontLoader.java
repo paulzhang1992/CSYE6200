@@ -40,10 +40,10 @@ public class FrontLoader extends Tractor {
 
     @Override
     public String toString() {
-        String line = "--------------------------------------------------------------------------------------------------------------------------------\n";
-        String title = "    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner\n";
-        String output = String.format("%1$12s %2$7s %3$7.1f %4$12s %5$13.1f %6$12.1f %7$13.2f %8$16.2f %9$6.1fk %10$5d %11$12s \n"
-                ,super.getMake(), super.getModel(),super.getPower(), super.getFuelType(), super.getFuelCap(), super.getFuelLoad(),super.getFuelEff(),super.getRange(),super.getPrice()/1000,super.getTractorID(),super.getOwnerID());
+        String line = "-------------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+        String title = "    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner     Loader Width    Loader Cap\n";
+        String output = String.format("%1$12s %2$7s %3$7.1f %4$12s %5$13.1f %6$12.1f %7$13.2f %8$16.2f %9$6.1fk %10$5d %11$12s %12$13.1f %12$13.1f\n"
+                ,super.getMake(), super.getModel(),super.getPower(), super.getFuelType(), super.getFuelCap(), super.getFuelLoad(),super.getFuelEff(),super.getRange(),super.getPrice()/1000,super.getTractorID(),super.getOwnerID(),loaderWidth,loaderCap);
 
 
         return title+ output+ line;

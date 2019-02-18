@@ -12,12 +12,10 @@ public class TractorWriteTest {
     static private Tractor tr4 = new Tractor();
     static private Tractor tr5 = new Tractor();
     static private FrontLoader fl1 = new FrontLoader();
-    private ArrayList<Tractor> tractorList = new ArrayList<Tractor>();
+    TractorArrayList array = new TractorArrayList();
+    private ArrayList<Tractor> tractorList = new ArrayList<>();
 
-    public TractorWriteTest() {
-
-
-
+    private TractorWriteTest() {
 
     }
 
@@ -90,57 +88,6 @@ public class TractorWriteTest {
     }
 
     /**
-     * Modify the tractor list with commands
-     * @param tractorList The list that need be modified
-     * @param tr  object (tractor)
-     * @param action   action can be "add", "get" or "remove"
-     */
-    public void listTractor(ArrayList<Tractor> tractorList, Tractor tr, String action) {
-        // For add, use .add
-        if (action == "add") {
-            tractorList.add(tr);
-            //return tr0;
-        }
-        // For get use .get with the index of tr
-        else if (action == "get") {
-            Tractor currentTractor = tractorList.get(tractorList.indexOf(tr));
-            System.out.println("The requested tractor information from Tractor List is stated as below: \n\n" + currentTractor + "\n\n\n");
-            //return currentTractor;
-        }
-        // For remove use .remove
-        else if (action == "remove" ) {
-            tractorList.remove(tr);
-            //return tr0;
-        }
-        // Output error if none above
-        else {
-            System.out.println("Wrong argument, please enter add, get or remove");
-            //return tr0;
-        }
-
-    }
-    /**
-     * Iterate the tractor list and print each one of it
-     * Output error message if the list is empty
-     * @param tractorList is an array list created to store the tractor info
-     */
-    public void listPrint(ArrayList<Tractor> tractorList) {
-        // Check if empty
-        if (tractorList.isEmpty() == true) {
-            System.out.println("The tractor list is empty\n\n\n");
-        }
-        else {
-
-            System.out.println("*****************************************************     TRACTOR LIST     *****************************************************\n");
-            for (Tractor tr : tractorList) {
-                System.out.println(tr);
-            }
-            System.out.println("\n********************************************************************************************************************************\n\n\n");
-        }
-
-    }
-
-    /**
      * List save to file
      * @param path file path
      * @param fileName  file name
@@ -189,14 +136,14 @@ public class TractorWriteTest {
     /**
      * Do works here
      */
-    public void run() throws IOException {
+    private void run() throws IOException {
         // Add tractors and frontloaders to the array list
-        listTractor(tractorList, tr1,"add");
-        listTractor(tractorList, tr2,"add");
-        listTractor(tractorList, tr3,"add");
-        listTractor(tractorList, tr4,"add");
-        listTractor(tractorList, tr5,"add");
-        listTractor(tractorList, fl1, "add");
+        array.listTractor(tractorList, tr1,"add");
+        array.listTractor(tractorList, tr2,"add");
+        array.listTractor(tractorList, tr3,"add");
+        array.listTractor(tractorList, tr4,"add");
+        array.listTractor(tractorList, tr5,"add");
+        array.listTractor(tractorList, fl1, "add");
 
         // Setting file and getting the current directory
         String fileName = "tractor.txt";
@@ -205,6 +152,7 @@ public class TractorWriteTest {
         String path = directory.getCanonicalPath()+ "\\assign3\\src\\assign3";
         // Test write method
         listToFile(path,fileName);
+        array.listPrint(tractorList);
 
 
 

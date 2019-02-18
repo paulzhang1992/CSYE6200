@@ -168,7 +168,7 @@ public class Tractor {
      * @return
      */
     public String toString() {
-        String line = "--------------------------------------------------------------------------------------------------------------------------------\n";
+        String line = "-------------------------------------------------------------------------------------------------------------------------------------------------------------\n";
         String title = "    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner\n";
         String output = String.format("%1$12s %2$7s %3$7.1f %4$12s %5$13.1f %6$12.1f %7$13.2f %8$16.2f %9$6.1fk %10$5d %11$12s \n"
                 ,make, model,power, fuelType, fuelCap, fuelLoad,fuelEff,range,price/1000,tractorID,ownerID);
