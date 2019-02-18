@@ -1,5 +1,9 @@
 package assign3;
 
+/**
+ * @@author Zeyu Zhang
+ */
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
