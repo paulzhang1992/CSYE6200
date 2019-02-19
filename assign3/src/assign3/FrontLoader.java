@@ -1,7 +1,7 @@
 package assign3;
 
 /**
- * @@author Zeyu Zhang
+ * @author Zeyu Zhang
  */
 
 

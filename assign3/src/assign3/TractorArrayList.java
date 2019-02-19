@@ -1,17 +1,11 @@
 package assign3;
 
-/**
- * @@author Zeyu Zhang
- */
-
 import java.util.ArrayList;
 
 public class TractorArrayList {
-    //public ArrayList<Tractor> tractorList = new ArrayList<>();
 
     public TractorArrayList() {
     }
-
 
     /**
      * Modify the tractor list with commands
@@ -33,6 +27,7 @@ public class TractorArrayList {
         else System.out.println("Wrong argument, please enter add, get or remove");
 
     }
+
     /**
      * Iterate the tractor list and print each one of it
      * Output error message if the list is empty
@@ -51,6 +46,5 @@ public class TractorArrayList {
                     System.out.println(tr);
             System.out.println("\n*************************************************************************************************************************************************************\n\n\n");
         }
-
     }
 }

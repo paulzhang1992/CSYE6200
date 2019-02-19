@@ -1,9 +1,5 @@
 package assign3;
 
-/**
- * @@author Zeyu Zhang
- */
-
 import java.io.*;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -11,17 +7,17 @@ import java.util.ArrayList;
 public class TractorIO {
     String path;
     String fileName;
-    String type;
 
-    public TractorIO(String path, String fileName, String type) {
-        this.path = path;
+    public TractorIO(String fileName) {
+        File directory = new File(".");
+        try {
+            this.path = directory.getCanonicalPath()+ "/assign3/src/assign3/output/";
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         this.fileName = fileName;
-        this.type = type;
     }
 
-    public TractorIO() {
-
-    }
 
     /**
      *     Tractor write method. Classes have the following variables need be written.
@@ -47,8 +43,9 @@ public class TractorIO {
      * @param path      file path
      * @param fileName  file name
      */
-    public void WriteFile (Tractor tr , String path, String fileName){
+    public void WriteTextFile (Tractor tr , String path, String fileName){
         // Set type of object Tractor of FrontLoader
+        String type;
         if (tr instanceof FrontLoader) type = "FrontLoader";
         else type = "Tractor";
         try {
@@ -79,10 +76,8 @@ public class TractorIO {
 
     /**
      * Reading the file to String
-     * @param path          file path
-     * @param fileName      file name
      */
-    public String ReadFile (String path, String fileName){
+    public String ReadTextFile (){
         String listOfTractor = "";
         File file = new File(path+fileName);
 
@@ -94,7 +89,6 @@ public class TractorIO {
                 String st;
                 while ((st = br.readLine()) != null)
                 listOfTractor += st;
-                //System.out.println(list);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -109,28 +103,21 @@ public class TractorIO {
      */
     public void Save (ArrayList<Tractor> tractorList) {
         try {
-            File directory = new File(".");
-            String path = directory.getCanonicalPath()+ "/assign3/src/assign3/output/";
-            FileOutputStream fileOut = new FileOutputStream(path+"tr.ser");
+            FileOutputStream fileOut = new FileOutputStream(path+fileName);
             ObjectOutputStream outObj = new ObjectOutputStream(fileOut);
             outObj.writeObject(tractorList);
             outObj.close();
             fileOut.close();
-            System.out.println("Array list serialized as tr.ser");
+            System.out.println("Array list serialized as "+fileName);
         }catch (IOException e){
             e.printStackTrace();
         }
-
-
     }
 
     /**
      * Deserialize ser file to object
-     *
-     * @param path      file path
-     * @param fileName  file name
      */
-    public ArrayList<Tractor> Load (String path, String fileName) {
+    public ArrayList<Tractor> Load () {
         ArrayList<Tractor> tractorArrayList = new ArrayList<Tractor>();
 
         try {
@@ -139,16 +126,11 @@ public class TractorIO {
             tractorArrayList = (ArrayList<Tractor>) inObj.readObject();
             inObj.close();
             fileIn.close();
-
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
-        //return tractorList;
-
         return tractorArrayList;
     }
-
 
 }
 

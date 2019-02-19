@@ -1,9 +1,5 @@
 package assign3;
 
-/**
- * @@author Zeyu Zhang
- */
-
 import java.io.*;
 import java.util.ArrayList;
 
@@ -14,7 +10,6 @@ public class TractorWriteTest {
     static private Tractor tr4 = new Tractor();
     static private Tractor tr5 = new Tractor();
     static private FrontLoader fl1 = new FrontLoader();
-    TractorArrayList array = new TractorArrayList();
     private ArrayList<Tractor> tractorList = new ArrayList<>();
 
     private TractorWriteTest() {
@@ -83,76 +78,57 @@ public class TractorWriteTest {
         tr5.setFuelEff(5.2);
         tr5.setRange(tr5.estRange());
         tr5.setPrice(29900);
-
-
-        // FrontLoader 1
-
     }
 
     /**
      * List save to file
-     * @param path file path
      * @param fileName  file name
      */
-    private void listToFile(String path, String fileName) {
-        // New file
-        File file = new File(path+fileName);
-        // Check if the file exist. If not creat new one.
-        if (!file.exists()) {
-            try {
+    private void listToFile(String fileName) {
+        try {
+            // Setting file and getting the current directory
+            File directory = new File(".");
+            // The folder path
+            String path = directory.getCanonicalPath() + "/assign3/src/assign3/output/";
+            // New file
+            File file = new File(path + fileName);
+            // Check if the file exist. If not creat new one.
+            if (!file.exists()) {
                 file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        // If exist. Delete old one and creat new one.
-        else {
-            try {
+            } else {
+                // If exist. Delete old one and creat new one.
                 System.out.println("Found duplicated file. Deleting....");
                 file.delete();
                 System.out.println("File deleted. Creating new.....");
                 file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
-        }
-        // Try the file write method created for Tractor anf FrontLoader class
-        try {
             // Open the file and append instead of overwrite
             FileWriter writer = new FileWriter(file.getAbsoluteFile(), true);
-            try {
-                // File start with [ to math the json format
-                writer.append("{");
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            // File start with [ to math the json format
+            writer.append("{");
+            writer.close();
+
             // Loop through the tractor list and write the content
-            TractorIO write = new TractorIO();
-            for (Tractor tr : tractorList) {
-                write.WriteFile(tr,path,fileName);
-            }
-             try {
-                 // Match the json format ending with ]
-                 FileWriter writer2 = new FileWriter(file.getAbsoluteFile(), true);
-                 writer2.append("}");
-                 writer2.close();
-             }catch (IOException e) {
-                 e.printStackTrace();
-             }
-            } catch (IOException e) {
+            TractorIO writeText = new TractorIO(fileName);
+            for (Tractor tr : tractorList) writeText.WriteTextFile(tr,path,fileName);
+
+            // Match the json format ending with ]
+            FileWriter writer2 = new FileWriter(file.getAbsoluteFile(), true);
+            writer2.append("}");
+            writer2.close();
+            System.out.println("File wrote to "+path+"/"+fileName);
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("File wrote to "+path+"\\"+fileName);
-
     }
-
 
     /**
      * Do works here
      */
-    private void run() throws IOException {
-        // Add tractors and frontloaders to the array list
+    private void run(){
+        TractorArrayList array = new TractorArrayList();
+        // Add tractors and front loaders to the array list
         array.listTractor(tractorList, tr1,"add");
         array.listTractor(tractorList, tr2,"add");
         array.listTractor(tractorList, tr3,"add");
@@ -160,40 +136,25 @@ public class TractorWriteTest {
         array.listTractor(tractorList, tr5,"add");
         array.listTractor(tractorList, fl1, "add");
 
-        // Setting file and getting the current directory
-        String fileName = "tractor.txt";
-        File directory = new File(".");
-        // The folder path
-        String path = directory.getCanonicalPath()+ "/assign3/src/assign3/output/";
         // Test write method
-        listToFile(path,fileName);
-
+        listToFile("tractor.txt");
+        // Test array list print method
         array.listPrint(tractorList);
 
-        // Serialize object save as tr.ser
-        TractorIO trio = new TractorIO();
+        // Test serialize object save as tr.ser
+        TractorIO trio = new TractorIO("tr.ser");
         trio.Save(tractorList);
-
-
-
     }
 
     /**
      * Test cast of Tractor
-     * @param args
      */
     public static void main(String[] args) {
-        // Create 5 instances of tractors for testing
+        // Create 5 instances of tractors and a instance of front loader for testing
         tractorGen();
 
-
+        // Run tractor write to file test
         TractorWriteTest tts1 = new TractorWriteTest();
-        try {
-            tts1.run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
+        tts1.run();
     }
 }
