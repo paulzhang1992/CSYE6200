@@ -4,9 +4,7 @@ package assign3;
  * @@author Zeyu Zhang
  */
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class TractorWriteTest {
@@ -98,7 +96,7 @@ public class TractorWriteTest {
      */
     private void listToFile(String path, String fileName) {
         // New file
-        File file = new File(path+"\\"+fileName);
+        File file = new File(path+fileName);
         // Check if the file exist. If not creat new one.
         if (!file.exists()) {
             try {
@@ -166,15 +164,20 @@ public class TractorWriteTest {
         String fileName = "tractor.txt";
         File directory = new File(".");
         // The folder path
-        String path = directory.getCanonicalPath()+ "\\assign3\\src\\assign3";
+        String path = directory.getCanonicalPath()+ "/assign3/src/assign3/output/";
         // Test write method
         listToFile(path,fileName);
+
         array.listPrint(tractorList);
 
+        // Serialize object save as tr.ser
+        TractorIO trio = new TractorIO();
+        trio.Save(tractorList);
 
 
 
     }
+
     /**
      * Test cast of Tractor
      * @param args

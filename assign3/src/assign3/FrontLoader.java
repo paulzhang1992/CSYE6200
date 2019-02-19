@@ -5,7 +5,7 @@ package assign3;
  */
 
 
-public class FrontLoader extends Tractor {
+public class FrontLoader extends Tractor implements java.io.Serializable{
 
     double loaderWidth;     // in cm
     double loaderCap;       // in cm^3

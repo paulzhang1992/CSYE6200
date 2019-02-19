@@ -4,7 +4,7 @@ package assign3;
  * @@author Zeyu Zhang
  */
 
-public class Tractor {
+public class Tractor implements java.io.Serializable {
 
     /**
      *

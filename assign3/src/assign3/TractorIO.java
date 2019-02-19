@@ -7,8 +7,6 @@ package assign3;
 import java.io.*;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class TractorIO {
     String path;
@@ -55,7 +53,7 @@ public class TractorIO {
         else type = "Tractor";
         try {
             // Append the the result
-            FileWriter writer = new FileWriter(path+"\\"+fileName, true);
+            FileWriter writer = new FileWriter(path+fileName, true);
             // Write content
             if (tr instanceof FrontLoader) {
                 FrontLoader fl = (FrontLoader) tr;
@@ -86,7 +84,7 @@ public class TractorIO {
      */
     public String ReadFile (String path, String fileName){
         String listOfTractor = "";
-        File file = new File(path+"\\"+fileName);
+        File file = new File(path+fileName);
 
         if (!file.exists()) {
             System.out.println("File does not exist. Quitting");
@@ -105,20 +103,50 @@ public class TractorIO {
         return listOfTractor;
     }
 
-    public List StringToList(String st, String sp) {
-        List<String> items = Arrays.asList(st.split(sp));
+    /**
+     * Serialize tractor array list
+     * @param tractorList tractor list
+     */
+    public void Save (ArrayList<Tractor> tractorList) {
+        try {
+            File directory = new File(".");
+            String path = directory.getCanonicalPath()+ "/assign3/src/assign3/output/";
+            FileOutputStream fileOut = new FileOutputStream(path+"tr.ser");
+            ObjectOutputStream outObj = new ObjectOutputStream(fileOut);
+            outObj.writeObject(tractorList);
+            outObj.close();
+            fileOut.close();
+            System.out.println("Array list serialized as tr.ser");
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
-        return items;
+
     }
-    public Tractor LoadTractor (String st) {
-        Tractor tr = new Tractor();
 
-        return tr;
-    }
-    public FrontLoader LoadFrontLoader (String st) {
-        FrontLoader fl = new FrontLoader();
+    /**
+     * Deserialize ser file to object
+     *
+     * @param path      file path
+     * @param fileName  file name
+     */
+    public ArrayList<Tractor> Load (String path, String fileName) {
+        ArrayList<Tractor> tractorArrayList = new ArrayList<Tractor>();
 
-        return fl;
+        try {
+            FileInputStream fileIn = new FileInputStream(path + fileName);
+            ObjectInputStream inObj = new ObjectInputStream(fileIn);
+            tractorArrayList = (ArrayList<Tractor>) inObj.readObject();
+            inObj.close();
+            fileIn.close();
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        //return tractorList;
+
+        return tractorArrayList;
     }
 
 
