@@ -122,13 +122,26 @@ public class TractorWriteTest {
         try {
             // Open the file and append instead of overwrite
             FileWriter writer = new FileWriter(file.getAbsoluteFile(), true);
-
+            try {
+                // File start with [ to math the json format
+                writer.append("{");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             // Loop through the tractor list and write the content
             TractorIO write = new TractorIO();
             for (Tractor tr : tractorList) {
                 write.WriteFile(tr,path,fileName);
             }
-
+             try {
+                 // Match the json format ending with ]
+                 FileWriter writer2 = new FileWriter(file.getAbsoluteFile(), true);
+                 writer2.append("}");
+                 writer2.close();
+             }catch (IOException e) {
+                 e.printStackTrace();
+             }
             } catch (IOException e) {
             e.printStackTrace();
         }
