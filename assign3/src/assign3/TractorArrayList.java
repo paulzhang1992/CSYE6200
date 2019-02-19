@@ -25,7 +25,6 @@ public class TractorArrayList {
         else if (action.equals("remove")) tractorList.remove(tr);
         // Output error if none above
         else System.out.println("Wrong argument, please enter add, get or remove");
-
     }
 
     /**

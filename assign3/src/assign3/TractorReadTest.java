@@ -5,11 +5,8 @@ import java.util.ArrayList;
 
 public class TractorReadTest {
 
-
-
     private TractorReadTest() {
     }
-
 
     /**
      * Do works here
@@ -20,7 +17,6 @@ public class TractorReadTest {
         String tractorText = readText.ReadTextFile();
         // Print out the read result
         System.out.println(tractorText);
-
 
         // Test deserialize objects
         TractorIO load = new TractorIO("tr.ser");

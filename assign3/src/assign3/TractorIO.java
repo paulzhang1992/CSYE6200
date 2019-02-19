@@ -18,7 +18,6 @@ public class TractorIO {
         this.fileName = fileName;
     }
 
-
     /**
      *     Tractor write method. Classes have the following variables need be written.
      *     Tractor
@@ -59,7 +58,6 @@ public class TractorIO {
                         ", \n\"fuelLoad\":" + fl.getFuelLoad() + ", \n\"fuelEff\":" + fl.getFuelEff() + ", \n\"range\":" + fl.getRange() +
                         ", \n\"price\":" + fl.getPrice() + ", \n\"tractorID\":" + fl.getTractorID() + ", \n\"ownerID\":\"" + fl.getOwnerID() +
                         ", \n\"loaderWidth\":" + fl.getLoaderWidth() + ", \n\"loaderCap\":" + fl.getLoaderCap()+"}");
-
             }
             else {
                 writer.append("{\"type\": \"" + type + "\", \n\"make\": \"" + tr.getMake() + "\", \n\"model\":\"" + tr.getModel() +
@@ -71,7 +69,6 @@ public class TractorIO {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
@@ -89,7 +86,6 @@ public class TractorIO {
                 String st;
                 while ((st = br.readLine()) != null)
                 listOfTractor += st;
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -131,7 +127,6 @@ public class TractorIO {
         }
         return tractorArrayList;
     }
-
 }
 
 
