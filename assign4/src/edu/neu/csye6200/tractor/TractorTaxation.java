@@ -3,184 +3,49 @@ package edu.neu.csye6200.tractor; /**
  *
  */
 
+import javax.imageio.IIOException;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
 
 public class TractorTaxation {
-    private HashMap<String, Tractor> tractorMap = new HashMap<String, Tractor>();
-    private ArrayList<Tractor> tractorList = new ArrayList<Tractor>();
+    private static Logger log = Logger.getLogger(TractorTaxation.class.getName());
+    private static TractorTaxation instance = null;
+    private double taxRate1;
+    private double taxRate2;
+    private double taxRate3;
+    private double taxRate4;
+    private ArrayList<Tractor> tractorTax;
 
-    static private Tractor tr1 = new Tractor();
-    static private Tractor tr2 = new Tractor();
-    static private Tractor tr3 = new Tractor();
-    static private Tractor tr4 = new Tractor();
-    static private Tractor tr5 = new Tractor();
-    static private Tractor tr0 = new Tractor();
-
-    // Tax rates are set to private variables to prevent unwanted changes
-    private int taxRate1;    // tax rate dollars/1000 dollars 0-5000
-    private int taxRate2;    // tax rate dollars/1000 dollars 5000 - 10000
-    private int taxRate3;    // tax rate dollars/1000 dollars 10000 - 15000
-    private int taxRate4;    // tax rate dollars/1000 dollars < 15000
-    private double tax;     // tax based on taxRate and price
-
-    public TractorTaxation() {
+    private TractorTaxation() {
         taxRate1 = 25; // 25 dollars per 1000 value
         taxRate2 = 35; // 35 dollars per 1000 value
         taxRate3 = 50; // 50 dollars per 1000 value
         taxRate4 = 100; // 100 dollars per 1000 value
-        tax = 0;    // default set to 0
-
+        tractorTax = new ArrayList<>();
     }
 
-    /**
-     * Data of five tractors for testing
-     * tr1, tr2, tr3, tr4, tr5
-     * Data found from the internet
-     * Fuel Load is set 90% of fuel capacity as default
-     * Fuel Efficiency is assumed with reason
-     * Tractor is auto generated
-     * Owner ID is set by author preferences
-     */
-    private void tractorGen() {
-        // Tractor 1
-        tr1.make = "Kubota";
-        tr1.model = "B2320";
-        tr1.power = 17.2;
-        tr1.fuelType = "diesel";
-        tr1.fuelCap = 26.1;
-        tr1.fuelLoad = 0.9 * tr1.fuelCap;
-        tr1.fuelEff = 4.4;
-        tr1.setRange(tr1.estRange());
-        tr1.setPrice(16000);
-        tr1.setOwnerID("Paul");
-
-        // Tractor 2
-        tr2.make = "ford";
-        tr2.model = "1920";
-        tr2.power = 24.8;
-        tr2.fuelCap = 37.1;
-        tr2.fuelEff = 3.2;
-        tr2.setRange(tr2.estRange());
-        tr2.setPrice(13000);
-        tr2.setOwnerID("James");
-
-        // Tractor 3
-        tr3.make = "fiat";
-        tr3.model = "500";
-        tr3.power = 37.3;
-        tr3.fuelCap = 54.1;
-        tr3.fuelLoad = 54.1;
-        tr3.fuelEff = 2.7;
-        tr3.setRange(tr3.estRange());
-        tr3.setPrice(5000);
-        tr3.setOwnerID("Mark");
-
-        // Tractor 4
-        tr4.setMake("New Holland");
-        tr4.setModel("T4.75");
-        tr4.setPower(55.2);
-        tr4.setFuelCap(90.1);
-        tr4.setFuelEff(3.8);
-        tr4.setRange(tr4.estRange());
-        tr4.setPrice(39000);
-        tr4.setOwnerID("Mia");
-
-        // Tractor 5
-        tr5.setMake("John Deere");
-        tr5.setModel("3303R");
-        tr5.setPower(24.6);
-        tr5.setFuelCap(44.7);
-        tr5.setFuelLoad(44.7);
-        tr5.setFuelEff(5.2);
-        tr5.setRange(tr5.estRange());
-        tr5.setPrice(29900);
-    }
-
-    /**
-     * Modify the tractor list with commands
-     * @param tractorList The list that need be modified
-     * @param tr  object (tractor)
-     * @param action   action can be "add", "get" or "remove"
-     */
-    public void listTractor(ArrayList<Tractor> tractorList, Tractor tr, String action) {
-        // For add, use .add
-        if (action == "add") {
-            tractorList.add(tr);
-            //return tr0;
-        }
-        // For get use .get with the index of tr
-        else if (action == "get") {
-            Tractor currentTractor = tractorList.get(tractorList.indexOf(tr));
-            System.out.println("The requested tractor information from Tractor List is stated as below: \n\n" + currentTractor + "\n\n\n");
-            //return currentTractor;
-        }
-        // For remove use .remove
-        else if (action == "remove" ) {
-            tractorList.remove(tr);
-            //return tr0;
-        }
-        // Output error if none above
-        else {
-            System.out.println("Wrong argument, please enter add, get or remove");
-            //return tr0;
-        }
-
-    }
-
-
-    /**
-     * Iterate the tractor list and print each one of it
-     * Output error message if the list is empty
-     * @param tractorList is an array list created to store the tractor info
-     */
-    public void listPrint(ArrayList<Tractor> tractorList) {
-        // Check if empty
-        if (tractorList.isEmpty() == true) {
-            System.out.println("The tractor list is empty\n\n\n");
-        }
-        else {
-
-            System.out.println("*****************************************************     TRACTOR LIST     *****************************************************\n");
-            for (Tractor tr : tractorList) {
-                System.out.println(tr);
+    public static TractorTaxation getInstance() {
+        if (instance == null) {
+            instance = new TractorTaxation();
+            try {
+                log.addHandler(new FileHandler("/assign4/src/edu/neu/csye6200/tractor/log/tax.log"));
+                log.info("TractorTaxation class has been constructed");
+            }catch (IOException e) {
+                e.printStackTrace();
             }
-            System.out.println("\n********************************************************************************************************************************\n\n\n");
         }
-
+        return instance;
     }
-
-    /**
-     * Add or retrieve tractor, print error if action is not included
-     * @param tractorMap    map
-     * @param tr    tractor
-     * @param action    can be add or get
-     */
-    public void mapTractor(HashMap<String, Tractor> tractorMap, Tractor tr, String action) {
-        // Get the OwnerID from the tractor and stored them in the hashMap
-        if (action == "add") tractorMap.put(tr.getOwnerID(), tr);
-        else if (action == "get") {
-            Tractor currentTractor = tractorMap.get(tr.getOwnerID()); // Get the tractor with tr owner ID
-            System.out.println("The requested tractor information from Tractor Map is stated as below: \n\n" + currentTractor + "\n\n\n");
-        }
-        else System.out.println("Wrong argument, please enter add or get");
-
-    }
-
     /**
      * Tax calculator
      * @param tr tractor
-     * @return tax of tractor
      */
     public double estTAX (Tractor tr) {
+        double tax;
         // Get the tractor price
         double price = tr.getPrice();
-
-        //tax calculation with a slab system
-        //  0 - 5000   25 / 1k
-        //  5000 - 10000 35 / 1k
-        //  10000 - 15000 50 / 1k
-        //  < 15000  100 / 1k
 
         if (price<= 5000) tax = price/1000*taxRate1;
         else if (5000 < price & price <= 10000) tax = 5*taxRate1 + (price-5000)/1000*taxRate2;
@@ -191,75 +56,63 @@ public class TractorTaxation {
             tax = 0;
             System.out.println("Tractor value error. Tax been set to 0.");
         }
-
+        //tr.setTax(tax);
         return tax;
+    }
+    public void add (Tractor tr){
+        tr.setTax(estTAX(tr));
+        tractorTax.add(tr);
+        try {
+            log.addHandler(new FileHandler("/assign4/src/edu/neu/csye6200/tractor/log/tax.log"));
+            log.info(tr.getMake()+"-"+tr.getModel()+" ---- Tax calculated and stored successfully");
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public ArrayList<Tractor> quickSort(String criteria, ArrayList<Tractor> list)
+    {
+        if (list.isEmpty())
+            return list; // start with recursion base case
+        ArrayList<Tractor> sorted;  // this shall be the sorted list to return, no needd to initialise
+        ArrayList<Tractor> smaller = new ArrayList<Tractor>(); // Tractors smaller than pivot
+        ArrayList<Tractor> larger = new ArrayList<Tractor>(); // Tractors larger than pivot
+        Tractor pivot = list.get(0);  // first Tractor in list, used as pivot
+        int i;
+        Tractor j;     // Variable used for Tractors in the loop
+        for (i=1;i<list.size();i++)
+        {
+            j=list.get(i);
+            if (j.compare(criteria,pivot)<0)   // make sure Tractor has proper compareTo method
+                smaller.add(j);
+            else
+                larger.add(j);
+        }
+        smaller=quickSort(criteria,smaller);  // capitalise 's'
+        larger=quickSort(criteria,larger);  // sort both halfs recursively
+        smaller.add(pivot);          // add initial pivot to the end of the (now sorted) smaller Tractors
+        smaller.addAll(larger);     // add the (now sorted) larger Tractors to the smaller ones (now smaller is essentially your sorted list)
+        sorted = smaller;            // assign it to sorted; one could just as well do: return smaller
+
+        return sorted;
+    }
+
+    public ArrayList<Tractor> getTractorTax() {
+        return tractorTax;
     }
 
     /**
      * Print the tax form including all tractor and their tax
      */
-    public void taxPrint() {
-        System.out.println("*******************************************************     TAX FORM     *******************************************************\n\n");
+    public void taxPrint(ArrayList<Tractor> tractorList) {
+        System.out.println("*******************************************************     TAX FORM     *******************************************************\n");
+        System.out.println("                Make            Model          ID           Owner          Price(k)           Tax($)                             \n");
         for (Tractor tr : tractorList) {
-
-            System.out.println("                        The annual tax based on tractor value for "+tr.getMake() + " "+ tr.getModel() +" is: "+tr.getTax()+" dollars\n");
+            String strOut = String.format("       %1$12s %2$17s %3$11d %4$15s %5$15.1fk %6$16.0f",tr.getMake(),tr.getModel(),tr.getTractorID(),tr.getOwnerID(),tr.getPrice()/1000,tr.getTax());
+            System.out.println(strOut);
         }
         System.out.println("\n********************************************************************************************************************************\n\n\n");
 
     }
 
-
-
-    public void run() {
-        // Create 5 instances of tractors for testing
-        tractorGen();
-
-        // Test print list method when the list is empty
-        listPrint(tractorList);
-
-        // Add all tractors to list
-        listTractor(tractorList, tr1,"add");
-        listTractor(tractorList, tr2,"add");
-        listTractor(tractorList, tr3,"add");
-        listTractor(tractorList, tr4,"add");
-        listTractor(tractorList, tr5,"add");
-
-        // Try get action to the list
-        listTractor(tractorList, tr2,"get");
-
-        // Print the list
-        listPrint(tractorList);
-
-        // Add all tractors to the hash map with their pre set owner id as key
-        mapTractor(tractorMap, tr1, "add");
-        mapTractor(tractorMap, tr2, "add");
-        mapTractor(tractorMap, tr3, "add");
-        mapTractor(tractorMap, tr4, "add");
-        mapTractor(tractorMap, tr5, "add");
-
-        // Retrieve the tr4's information
-        mapTractor(tractorMap, tr4, "get");
-
-        // Calculate tax for every entries in the hash map
-        for (Tractor tr: tractorMap.values()){
-            tr.setTax(estTAX(tr));
-        }
-
-        // Print out the tax form
-        taxPrint();
-
-
-    }
-    /**
-     * Test cast of Tractor Taxation
-     * @param args
-     */
-    public static void main(String[] args) {
-        // tax test case
-        TractorTaxation tta1 = new TractorTaxation();
-        tta1.run();
-
-
-    }
 
 }

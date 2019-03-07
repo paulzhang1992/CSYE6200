@@ -1,23 +1,12 @@
 package edu.neu.csye6200.tractor;
 
+import javax.lang.model.util.ElementScanner6;
+
 /**
  * @author Zeyu Zhang
  */
 
 public class Tractor implements java.io.Serializable {
-
-    /**
-     *
-     * • Add Strings for both the make and model
-     *      (i.e. make: Kubota, model: B2320DT)
-     * • Add an Owner ID string (i.e. “ m.munson ”)
-     * • Add a tractor value ( ie.e . $20,000)
-     * • Add value for tractor power in terms of of horsepower (HP) or  KiloWatts (KW).
-     * • Add a String to hold the fuel type (diesel, gasoline, kerosene, electric, etc.), capacity and current fuel load
-     * • Add a constructor that sets the make and model, along with the other instance variables
-     * • Add methods to calculate the range based on fuel load and a fuel efficiency value (kilometers per liter)
-     */
-
     String make;	// Manufacturer
     String model;	// Tractor model
     double power;	// in kw
@@ -166,6 +155,18 @@ public class Tractor implements java.io.Serializable {
         this.tax = tax;
     }
 
+    public int compare (String criteria, Tractor tr){
+        if (criteria.equalsIgnoreCase("id")) return tractorID - tr.tractorID;
+        else if (criteria.equalsIgnoreCase("ownerId"))return ownerID.compareTo(tr.getOwnerID());
+        else if (criteria.equalsIgnoreCase("price")) return (int)(price - tr.getPrice());
+        else if (criteria.equalsIgnoreCase("power")) return (int) (power - tr.getPower());
+        else if (criteria.equalsIgnoreCase("Make")) return make.compareTo(tr.getMake());
+        else {
+            System.out.println("Wrong criteria");
+            return 0;
+        }
+    }
+
     /**
      *
      * @return
@@ -178,7 +179,6 @@ public class Tractor implements java.io.Serializable {
                 ,make, model,power, fuelType, fuelCap, fuelLoad,fuelEff,range,price/1000,tractorID,ownerID);
         return title+ output+ line;
     }
-
     /**
      * Estimate range left based on fuel load and fuel efficiency
      * range (km) = load (L) * eff (km/L)
