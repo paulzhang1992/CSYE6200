@@ -8,7 +8,7 @@ package assign2a;
  */
 
 
-public class TractorTest {
+class TractorTest {
 
 	public TractorTest() {
 		// TODO Auto-generated constructor stub

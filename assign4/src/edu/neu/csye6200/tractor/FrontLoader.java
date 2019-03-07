@@ -1,15 +1,15 @@
-package assign3;
+package edu.neu.csye6200.tractor;
 
 /**
  * @author Zeyu Zhang
  */
 
-class FrontLoader extends Tractor implements java.io.Serializable{
+public class FrontLoader extends Tractor implements java.io.Serializable{
 
     double loaderWidth;     // in cm
     double loaderCap;       // in cm^3
 
-    FrontLoader() {
+    public FrontLoader() {
         loaderWidth = 188.0616;
         loaderCap =  120000;
         super.setMake("Cat");
@@ -23,19 +23,19 @@ class FrontLoader extends Tractor implements java.io.Serializable{
         super.setPrice(90000);
     }
 
-    double getLoaderWidth() {
+    public double getLoaderWidth() {
         return loaderWidth;
     }
 
-    void setLoaderWidth(double loaderWidth) {
+    public void setLoaderWidth(double loaderWidth) {
         this.loaderWidth = loaderWidth;
     }
 
-    double getLoaderCap() {
+    public double getLoaderCap() {
         return loaderCap;
     }
 
-    void setLoaderCap(double loaderCap) {
+    public void setLoaderCap(double loaderCap) {
         this.loaderCap = loaderCap;
     }
 

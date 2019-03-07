@@ -5,7 +5,7 @@ package assign2b;
  */
 
 
-public class TractorTest {
+class TractorTest {
     static private Tractor tr1 = new Tractor();
     static private Tractor tr2 = new Tractor();
     static private Tractor tr3 = new Tractor();
@@ -20,7 +20,7 @@ public class TractorTest {
     /**
      * Do works here
      */
-    public void run() {
+    void run() {
         tractorPrint();
 
 
@@ -28,7 +28,7 @@ public class TractorTest {
 
     }
 
-    public void tractorPrint() {
+    void tractorPrint() {
         System.out.println("********************************************************************************************************************************\n");
         System.out.println(tr1);
         System.out.println(tr2);

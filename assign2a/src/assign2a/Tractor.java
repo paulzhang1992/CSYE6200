@@ -8,7 +8,7 @@ package assign2a;
  * 
  *
  */
-public class Tractor {
+class Tractor {
 	String make;	// Manufacturer
 	String model;	// Tractor model
 	double power;	// in kw

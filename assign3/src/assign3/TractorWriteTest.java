@@ -3,7 +3,7 @@ package assign3;
 import java.io.*;
 import java.util.ArrayList;
 
-public class TractorWriteTest {
+class TractorWriteTest {
 
     static private Tractor tr1 = new Tractor();
     static private Tractor tr2 = new Tractor();

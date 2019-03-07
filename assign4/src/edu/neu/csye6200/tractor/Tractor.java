@@ -1,9 +1,10 @@
-package assign3;
+package edu.neu.csye6200.tractor;
 
 /**
  * @author Zeyu Zhang
  */
-class Tractor implements java.io.Serializable {
+
+public class Tractor implements java.io.Serializable {
 
     /**
      *
@@ -29,11 +30,12 @@ class Tractor implements java.io.Serializable {
     private static int idCount = 0;
     private int tractorID;
     private String ownerID;
+    double tax;
 
     /***
      * Default constructor
      */
-    Tractor() {
+    public Tractor() {
         make = "Unknown";
         model = "Unknown";
         ownerID = "Unknown";
@@ -45,30 +47,30 @@ class Tractor implements java.io.Serializable {
         fuelEff = 4;
         range = this.estRange();
         tractorID = idCount++;
-        //tax = 0;
+        tax = 0;
     }
 
-    String getMake() {
+    public String getMake() {
         return make;
     }
 
-    void setMake(String make) {
+    public void setMake(String make) {
         this.make = make;
     }
 
-    String getModel() {
+    public String getModel() {
         return model;
     }
 
-    void setModel(String model) {
+    public void setModel(String model) {
         this.model = model;
     }
 
-    double getPower() {
+    public double getPower() {
         return power;
     }
 
-    void setPower(double power) {
+    public void setPower(double power) {
         if (power <= 0) {
             power = 15;
             System.out.println("Power need to be larger than 0. Set to default as " + power);
@@ -76,19 +78,19 @@ class Tractor implements java.io.Serializable {
         this.power = power;
     }
 
-    String getFuelType() {
+    public String getFuelType() {
         return fuelType;
     }
 
-    void setFuelType(String fuelType) {
+    public void setFuelType(String fuelType) {
         this.fuelType = fuelType;
     }
 
-    double getFuelCap() {
+    public double getFuelCap() {
         return fuelCap;
     }
 
-    void setFuelCap(double fuelCap) {
+    public void setFuelCap(double fuelCap) {
         if (fuelCap <= 0) {
             fuelCap = 20;
             System.out.println("Power need to be larger than 0. Set to default as " + fuelCap);
@@ -96,11 +98,11 @@ class Tractor implements java.io.Serializable {
         this.fuelCap = fuelCap;
     }
 
-    double getFuelLoad() {
+    public double getFuelLoad() {
         return fuelLoad;
     }
 
-    void setFuelLoad(double fuelLoad) {
+    public void setFuelLoad(double fuelLoad) {
         if (fuelLoad <= 0) {
             fuelLoad = this.fuelCap*0.9;
             System.out.println("Power need to be larger than 0. Set fuel load to 90% of fuel cap as " + fuelLoad);
@@ -108,11 +110,11 @@ class Tractor implements java.io.Serializable {
         this.fuelLoad = fuelLoad;
     }
 
-    double getFuelEff() {
+    public double getFuelEff() {
         return fuelEff;
     }
 
-    void setFuelEff(double fuelEff) {
+    public void setFuelEff(double fuelEff) {
         if (fuelEff <= 0) {
             fuelEff = 4;
             System.out.println("Power need to be larger than 0. Set to default as " + fuelEff);
@@ -120,19 +122,19 @@ class Tractor implements java.io.Serializable {
         this.fuelEff = fuelEff;
     }
 
-    double getRange() {
+    public double getRange() {
         return range;
     }
 
-    void setRange(double range) {
+    public void setRange(double range) {
         this.range = range;
     }
 
-    double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    void setPrice(double price) {
+    public void setPrice(double price) {
         if (price <= 0) {
             price = 20000;
             System.out.println("Power need to be larger than 0. Set to default as " + price);
@@ -140,20 +142,28 @@ class Tractor implements java.io.Serializable {
         this.price = price;
     }
 
-    String getOwnerID() {
+    public String getOwnerID() {
         return ownerID;
     }
 
-    void setOwnerID(String ownerID) {
+    public void setOwnerID(String ownerID) {
         this.ownerID = ownerID;
     }
 
-    int getTractorID() {
+    public int getTractorID() {
         return tractorID;
     }
 
-    void setTractorID(int tractorID) {
+    public void setTractorID(int tractorID) {
         this.tractorID = tractorID;
+    }
+
+    public double getTax() {
+        return tax;
+    }
+
+    public void setTax(double tax) {
+        this.tax = tax;
     }
 
     /**
@@ -174,7 +184,7 @@ class Tractor implements java.io.Serializable {
      * range (km) = load (L) * eff (km/L)
      * @return range left for tractor
      */
-    double estRange() {
+    public double estRange() {
         double range = fuelLoad * fuelEff;
         return range;
     }

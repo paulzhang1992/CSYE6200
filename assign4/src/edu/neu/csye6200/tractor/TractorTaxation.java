@@ -1,6 +1,4 @@
-package assign2b;
-
-/**
+package edu.neu.csye6200.tractor; /**
  * @@author Zeyu Zhang
  *
  */
@@ -8,7 +6,7 @@ package assign2b;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-class TractorTaxation {
+public class TractorTaxation {
     private HashMap<String, Tractor> tractorMap = new HashMap<String, Tractor>();
     private ArrayList<Tractor> tractorList = new ArrayList<Tractor>();
 
@@ -26,7 +24,7 @@ class TractorTaxation {
     private int taxRate4;    // tax rate dollars/1000 dollars < 15000
     private double tax;     // tax based on taxRate and price
 
-    TractorTaxation() {
+    public TractorTaxation() {
         taxRate1 = 25; // 25 dollars per 1000 value
         taxRate2 = 35; // 35 dollars per 1000 value
         taxRate3 = 50; // 50 dollars per 1000 value
@@ -105,7 +103,7 @@ class TractorTaxation {
      * @param tr  object (tractor)
      * @param action   action can be "add", "get" or "remove"
      */
-    void listTractor(ArrayList<Tractor> tractorList, Tractor tr, String action) {
+    public void listTractor(ArrayList<Tractor> tractorList, Tractor tr, String action) {
         // For add, use .add
         if (action == "add") {
             tractorList.add(tr);
@@ -136,7 +134,7 @@ class TractorTaxation {
      * Output error message if the list is empty
      * @param tractorList is an array list created to store the tractor info
      */
-    void listPrint(ArrayList<Tractor> tractorList) {
+    public void listPrint(ArrayList<Tractor> tractorList) {
         // Check if empty
         if (tractorList.isEmpty() == true) {
             System.out.println("The tractor list is empty\n\n\n");
@@ -158,7 +156,7 @@ class TractorTaxation {
      * @param tr    tractor
      * @param action    can be add or get
      */
-    void mapTractor(HashMap<String, Tractor> tractorMap, Tractor tr, String action) {
+    public void mapTractor(HashMap<String, Tractor> tractorMap, Tractor tr, String action) {
         // Get the OwnerID from the tractor and stored them in the hashMap
         if (action == "add") tractorMap.put(tr.getOwnerID(), tr);
         else if (action == "get") {
@@ -174,7 +172,7 @@ class TractorTaxation {
      * @param tr tractor
      * @return tax of tractor
      */
-    double estTAX (Tractor tr) {
+    public double estTAX (Tractor tr) {
         // Get the tractor price
         double price = tr.getPrice();
 
@@ -200,7 +198,7 @@ class TractorTaxation {
     /**
      * Print the tax form including all tractor and their tax
      */
-    void taxPrint() {
+    public void taxPrint() {
         System.out.println("*******************************************************     TAX FORM     *******************************************************\n\n");
         for (Tractor tr : tractorList) {
 
@@ -212,7 +210,7 @@ class TractorTaxation {
 
 
 
-    void run() {
+    public void run() {
         // Create 5 instances of tractors for testing
         tractorGen();
 

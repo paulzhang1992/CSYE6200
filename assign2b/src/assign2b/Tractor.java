@@ -5,7 +5,7 @@ package assign2b;
  */
 
 
-public class Tractor {
+class Tractor {
 
     /**
      *
@@ -36,7 +36,7 @@ public class Tractor {
     /***
      * Default constructor
      */
-    public Tractor() {
+    Tractor() {
         make = "Unknown";
         model = "Unknown";
         ownerID = "Unknown";
@@ -55,27 +55,27 @@ public class Tractor {
      *
      * Setters & Getters
      */
-    public String getMake() {
+    String getMake() {
         return make;
     }
 
-    public void setMake(String make) {
+    void setMake(String make) {
         this.make = make;
     }
 
-    public String getModel() {
+    String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
+    void setModel(String model) {
         this.model = model;
     }
 
-    public double getPower() {
+    double getPower() {
         return power;
     }
 
-    public void setPower(double power) {
+    void setPower(double power) {
         if (power <= 0) {
             power = 15;
             System.out.println("Power need to be larger than 0. Set to default as " + power);
@@ -83,19 +83,19 @@ public class Tractor {
         this.power = power;
     }
 
-    public String getFuelType() {
+    String getFuelType() {
         return fuelType;
     }
 
-    public void setFuelType(String fuelType) {
+    void setFuelType(String fuelType) {
         this.fuelType = fuelType;
     }
 
-    public double getFuelCap() {
+    double getFuelCap() {
         return fuelCap;
     }
 
-    public void setFuelCap(double fuelCap) {
+    void setFuelCap(double fuelCap) {
         if (fuelCap <= 0) {
             fuelCap = 20;
             System.out.println("Power need to be larger than 0. Set to default as " + fuelCap);
@@ -103,11 +103,11 @@ public class Tractor {
         this.fuelCap = fuelCap;
     }
 
-    public double getFuelLoad() {
+    double getFuelLoad() {
         return fuelLoad;
     }
 
-    public void setFuelLoad(double fuelLoad) {
+    void setFuelLoad(double fuelLoad) {
         if (fuelLoad <= 0) {
             fuelLoad = this.fuelCap*0.9;
             System.out.println("Power need to be larger than 0. Set fuel load to 90% of fuel cap as " + fuelLoad);
@@ -115,11 +115,11 @@ public class Tractor {
         this.fuelLoad = fuelLoad;
     }
 
-    public double getFuelEff() {
+    double getFuelEff() {
         return fuelEff;
     }
 
-    public void setFuelEff(double fuelEff) {
+    void setFuelEff(double fuelEff) {
         if (fuelEff <= 0) {
             fuelEff = 4;
             System.out.println("Power need to be larger than 0. Set to default as " + fuelEff);
@@ -127,19 +127,19 @@ public class Tractor {
         this.fuelEff = fuelEff;
     }
 
-    public double getRange() {
+    double getRange() {
         return range;
     }
 
-    public void setRange(double range) {
+    void setRange(double range) {
         this.range = range;
     }
 
-    public double getPrice() {
+    double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    void setPrice(double price) {
         if (price <= 0) {
             price = 20000;
             System.out.println("Power need to be larger than 0. Set to default as " + price);
@@ -147,23 +147,23 @@ public class Tractor {
         this.price = price;
     }
 
-    public String getOwnerID() {
+    String getOwnerID() {
         return ownerID;
     }
 
-    public void setOwnerID(String ownerID) {
+    void setOwnerID(String ownerID) {
         this.ownerID = ownerID;
     }
 
-    public int getTractorID() {
+    int getTractorID() {
         return tractorID;
     }
 
-    public double getTax() {
+    double getTax() {
         return tax;
     }
 
-    public void setTax(double tax) {
+    void setTax(double tax) {
         this.tax = tax;
     }
 
@@ -183,7 +183,7 @@ public class Tractor {
      * range (km) = load (L) * eff (km/L)
      * @return range left for tractor
      */
-    public double estRange() {
+    double estRange() {
         double range = fuelLoad * fuelEff;
         return range;
     }

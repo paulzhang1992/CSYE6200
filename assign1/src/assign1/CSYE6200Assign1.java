@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 
 
-public class CSYE6200Assign1 {
+class CSYE6200Assign1 {
 	
 	public static void main(String args[]) throws java.io.IOException {
 		// Create an instance of the class, and call the constructor method

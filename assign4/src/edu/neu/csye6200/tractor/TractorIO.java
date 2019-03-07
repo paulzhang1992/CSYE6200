@@ -1,14 +1,13 @@
-package assign3;
+package edu.neu.csye6200.tractor;
 
 import java.io.*;
-import java.io.IOException;
 import java.util.ArrayList;
 
-class TractorIO {
+public class TractorIO {
     String path;
     String fileName;
 
-    TractorIO(String fileName) {
+    public TractorIO(String fileName) {
         File directory = new File(".");
         try {
             this.path = directory.getCanonicalPath()+ "/assign3/src/assign3/output/";
@@ -42,7 +41,7 @@ class TractorIO {
      * @param path      file path
      * @param fileName  file name
      */
-    void WriteTextFile (Tractor tr , String path, String fileName){
+    public void WriteTextFile (Tractor tr , String path, String fileName){
         // Set type of object Tractor of FrontLoader
         String type;
         if (tr instanceof FrontLoader) type = "FrontLoader";
@@ -74,7 +73,7 @@ class TractorIO {
     /**
      * Reading the file to String
      */
-    String ReadTextFile (){
+    public String ReadTextFile (){
         String listOfTractor = "";
         File file = new File(path+fileName);
 
@@ -97,7 +96,7 @@ class TractorIO {
      * Serialize tractor array list
      * @param tractorList tractor list
      */
-    void Save (ArrayList<Tractor> tractorList) {
+    public void Save (ArrayList<Tractor> tractorList) {
         try {
             FileOutputStream fileOut = new FileOutputStream(path+fileName);
             ObjectOutputStream outObj = new ObjectOutputStream(fileOut);
@@ -113,7 +112,7 @@ class TractorIO {
     /**
      * Deserialize ser file to object
      */
-    ArrayList<Tractor> Load () {
+    public ArrayList<Tractor> Load () {
         ArrayList<Tractor> tractorArrayList = new ArrayList<Tractor>();
 
         try {

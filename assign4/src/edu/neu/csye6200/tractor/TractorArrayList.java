@@ -1,10 +1,10 @@
-package assign3;
+package edu.neu.csye6200.tractor;
 
 import java.util.ArrayList;
 
-class TractorArrayList {
+public class TractorArrayList {
 
-    TractorArrayList() {
+    public TractorArrayList() {
     }
 
     /**
@@ -13,7 +13,7 @@ class TractorArrayList {
      * @param tr  object (tractor)
      * @param action   action can be "add", "get" or "remove"
      */
-    void listTractor(ArrayList<Tractor> tractorList, Tractor tr, String action) {
+    public void listTractor(ArrayList<Tractor> tractorList, Tractor tr, String action) {
         // For add, use .add
         if (action.equals("add")) tractorList.add(tr);
         // For get use .get with the index of tr
@@ -32,7 +32,7 @@ class TractorArrayList {
      * Output error message if the list is empty
      * @param tractorList is an array list created to store the tractor info
      */
-    void listPrint(ArrayList<Tractor> tractorList) {
+    public void listPrint(ArrayList<Tractor> tractorList) {
         // Check if empty
         if (tractorList.isEmpty()) System.out.println("The tractor list is empty\n\n\n");
         else {
