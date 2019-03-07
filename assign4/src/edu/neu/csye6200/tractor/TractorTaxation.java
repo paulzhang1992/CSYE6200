@@ -4,7 +4,9 @@ package edu.neu.csye6200.tractor; /**
  */
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
@@ -16,9 +18,19 @@ public class TractorTaxation {
     private double taxRate3;
     private double taxRate4;
     private ArrayList<Tractor> tractorTax;
-    private static String pattern = "./assign4/src/edu/neu/csye6200/tractor/log/tax.log";
+    private static String timeStamp = new SimpleDateFormat().format( new Date() );
+    private static String pattern = "./assign4/src/edu/neu/csye6200/tractor/log/tax_"+timeStamp+".log";
+    private static FileHandler fh;
 
-    private TractorTaxation() {
+    static {
+        try {
+            fh = new FileHandler(pattern);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private TractorTaxation(){
         taxRate1 = 25; // 25 dollars per 1000 value
         taxRate2 = 35; // 35 dollars per 1000 value
         taxRate3 = 50; // 50 dollars per 1000 value
@@ -26,15 +38,12 @@ public class TractorTaxation {
         tractorTax = new ArrayList<>();
     }
 
-    public static TractorTaxation getInstance() {
+    public static TractorTaxation getInstance(){
         if (instance == null) {
             instance = new TractorTaxation();
-            try {
-                log.addHandler(new FileHandler(pattern));
-                log.info("TractorTaxation class has been constructed");
-            }catch (IOException e) {
-                e.printStackTrace();
-            }
+            log.addHandler(fh);
+            log.info("TractorTaxation class has been constructed");
+
         }
         return instance;
     }
@@ -62,12 +71,8 @@ public class TractorTaxation {
     public void add (Tractor tr){
         tr.setTax(estTAX(tr));
         tractorTax.add(tr);
-        try {
-            log.addHandler(new FileHandler(pattern));
-            log.info(tr.getMake()+"-"+tr.getModel()+" ---- Tax calculated and stored successfully");
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
+        log.info(tr.getMake()+"-"+tr.getModel()+" ---- Tax calculated and stored successfully");
+
     }
     public ArrayList<Tractor> quickSort(String criteria, ArrayList<Tractor> list)
     {

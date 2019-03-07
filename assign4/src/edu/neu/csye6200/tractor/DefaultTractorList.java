@@ -71,11 +71,30 @@ public class DefaultTractorList {
         tr5.setRange(tr5.estRange());
         tr5.setPrice(29900);
 
+        // FrontLoader 1
+        FrontLoader fl1 = new FrontLoader();
+        fl1.setOwnerID("Mark");
+
+        // FrontLoader 2
+        FrontLoader fl2 = new FrontLoader();
+        fl2.setMake("Cat");
+        fl2.setModel("880T");
+        fl2.setPower(40);
+        fl2.setFuelCap(58);
+        fl2.setFuelEff(5.0);
+        fl2.setRange(fl2.estRange());
+        fl2.setPrice(14500);
+        fl2.setLoaderCap(100000);
+        fl2.setLoaderWidth(200);
+        fl2.setOwnerID("Mia");
+
         tractorArrayList.add(tr1);
         tractorArrayList.add(tr2);
         tractorArrayList.add(tr3);
         tractorArrayList.add(tr4);
         tractorArrayList.add(tr5);
+        tractorArrayList.add(fl1);
+        tractorArrayList.add(fl2);
 
     }
 
