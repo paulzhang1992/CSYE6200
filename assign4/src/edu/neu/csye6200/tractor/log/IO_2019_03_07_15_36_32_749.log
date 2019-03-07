@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-03-07T20:36:32.751713Z</date>
+  <millis>1551990992751</millis>
+  <nanos>713000</nanos>
+  <sequence>11</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>TractorIO class constructed.</message>
+</record>
+<record>
+  <date>2019-03-07T20:36:33.089801Z</date>
+  <millis>1551990993089</millis>
+  <nanos>801000</nanos>
+  <sequence>12</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>WriteTextFile</method>
+  <thread>1</thread>
+  <message>class java.util.ArrayList saved to file tr.txt successfully.</message>
+</record>
+<record>
+  <date>2019-03-07T20:36:33.093237Z</date>
+  <millis>1551990993093</millis>
+  <nanos>237000</nanos>
+  <sequence>13</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>ReadTextFile</method>
+  <thread>1</thread>
+  <message>tr.txt has been successfully read.</message>
+</record>
+<record>
+  <date>2019-03-07T20:36:33.182881Z</date>
+  <millis>1551990993182</millis>
+  <nanos>881000</nanos>
+  <sequence>14</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>Save</method>
+  <thread>1</thread>
+  <message>Serialization completed</message>
+</record>
+<record>
+  <date>2019-03-07T20:36:33.206602Z</date>
+  <millis>1551990993206</millis>
+  <nanos>602000</nanos>
+  <sequence>15</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>Load</method>
+  <thread>1</thread>
+  <message>Deserialization completed</message>
+</record>
+</log>

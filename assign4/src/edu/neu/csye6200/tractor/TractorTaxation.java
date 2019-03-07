@@ -18,7 +18,7 @@ public class TractorTaxation {
     private double taxRate3;
     private double taxRate4;
     private ArrayList<Tractor> tractorTax;
-    private static String timeStamp = new SimpleDateFormat().format( new Date() );
+    private static String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SS").format( new Date() );
     private static String pattern = "./assign4/src/edu/neu/csye6200/tractor/log/tax_"+timeStamp+".log";
     private static FileHandler fh;
 

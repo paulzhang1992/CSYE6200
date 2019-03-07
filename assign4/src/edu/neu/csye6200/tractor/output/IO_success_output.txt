@@ -1,0 +1,160 @@
+/usr/lib/jvm/jdk-11.0.2/bin/java -javaagent:/home/paul/Documents/idea-IU-183.5429.30/lib/idea_rt.jar=35215:/home/paul/Documents/idea-IU-183.5429.30/bin -Dfile.encoding=UTF-8 -classpath /home/paul/IdeaProjects/CSYE6200-Concpts-of-Object-Oriented-Design/out/production/assign4 edu.neu.csye6200.tractor.TractorTest
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation getInstance
+INFO: TractorTaxation class has been constructed
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Kubota-B2320 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Ford-1920 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Fiat-500 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: New Holland-T4.75 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: John Deere-3303R ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Cat-906M ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Cat-880T ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Kubota-B3300 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Fiat-920 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Cat-450P ---- Tax calculated and stored successfully
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+             Kubota             B2320           0            Paul            16.0k              650
+               Ford              1920           1           James            13.0k              450
+               Fiat               500           2            Mark             5.0k              125
+        New Holland             T4.75           3             Mia            39.0k             2950
+         John Deere             3303R           4         Unknown            29.9k             2040
+                Cat              906M           5            Mark            90.0k             8050
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B3300           7            Paul            18.9k              940
+               Fiat               920           8           James            29.0k             1950
+                Cat              450P           9         Unknown            26.5k             1700
+
+********************************************************************************************************************************
+
+
+
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+               Fiat               500           2            Mark             5.0k              125
+               Ford              1920           1           James            13.0k              450
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B2320           0            Paul            16.0k              650
+             Kubota             B3300           7            Paul            18.9k              940
+                Cat              450P           9         Unknown            26.5k             1700
+               Fiat               920           8           James            29.0k             1950
+         John Deere             3303R           4         Unknown            29.9k             2040
+        New Holland             T4.75           3             Mia            39.0k             2950
+                Cat              906M           5            Mark            90.0k             8050
+
+********************************************************************************************************************************
+
+
+
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+               Ford              1920           1           James            13.0k              450
+               Fiat               920           8           James            29.0k             1950
+               Fiat               500           2            Mark             5.0k              125
+                Cat              906M           5            Mark            90.0k             8050
+        New Holland             T4.75           3             Mia            39.0k             2950
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B2320           0            Paul            16.0k              650
+             Kubota             B3300           7            Paul            18.9k              940
+         John Deere             3303R           4         Unknown            29.9k             2040
+                Cat              450P           9         Unknown            26.5k             1700
+
+********************************************************************************************************************************
+
+
+
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+             Kubota             B2320           0            Paul            16.0k              650
+               Ford              1920           1           James            13.0k              450
+               Fiat               500           2            Mark             5.0k              125
+        New Holland             T4.75           3             Mia            39.0k             2950
+         John Deere             3303R           4         Unknown            29.9k             2040
+                Cat              906M           5            Mark            90.0k             8050
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B3300           7            Paul            18.9k              940
+               Fiat               920           8           James            29.0k             1950
+                Cat              450P           9         Unknown            26.5k             1700
+
+********************************************************************************************************************************
+
+
+
+Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorIO <init>
+INFO: TractorIO class constructed.
+Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO WriteTextFile
+INFO: class java.util.ArrayList saved to file tr.txt successfully.
+Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO ReadTextFile
+INFO: tr.txt has been successfully read.
+Array list serialized as re.ser
+Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO Save
+INFO: Serialization completed
+Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO Load
+INFO: Deserialization completed
+********************************************************************     TRACTOR LIST     ********************************************************************
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+      Kubota   B2320    17.2       diesel          26.1         23.5          4.40           103.36   16.0k     0         Paul 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+        Ford    1920    24.8       diesel          37.1         18.0          3.20            57.60   13.0k     1        James 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+        Fiat     500    37.3       diesel          54.1         54.1          2.70           146.07    5.0k     2         Mark 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+ New Holland   T4.75    55.2       diesel          90.1         18.0          3.80            68.40   39.0k     3          Mia 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+  John Deere   3303R    24.6       diesel          44.7         44.7          5.20           232.44   29.9k     4      Unknown 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner     Loader Width    Loader Cap
+         Cat    906M    54.4       diesel          51.9         46.7          3.50           163.36   90.0k     5         Mark         188.1         188.1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner     Loader Width    Loader Cap
+         Cat    880T    40.0       diesel          58.0         46.7          5.00           233.37   14.5k     6          Mia         200.0         200.0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+      Kubota   B3300    19.8       diesel          40.0         36.0          4.00           144.00   18.9k     7         Paul 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
+        Fiat     920    26.7       diesel          55.0         18.0          3.90            70.20   29.0k     8        James 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner     Loader Width    Loader Cap
+         Cat    450P    32.0       diesel          80.0         46.7          3.50           163.36   26.5k     9      Unknown         180.0         180.0
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*************************************************************************************************************************************************************
+
+
+
+
+Process finished with exit code 0
+

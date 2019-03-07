@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2019-03-07T20:32:36.842933Z</date>
+  <millis>1551990756842</millis>
+  <nanos>933000</nanos>
+  <sequence>0</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>getInstance</method>
+  <thread>1</thread>
+  <message>TractorTaxation class has been constructed</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.922024Z</date>
+  <millis>1551990756922</millis>
+  <nanos>24000</nanos>
+  <sequence>1</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Kubota-B2320 ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.923340Z</date>
+  <millis>1551990756923</millis>
+  <nanos>340000</nanos>
+  <sequence>2</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Ford-1920 ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.924573Z</date>
+  <millis>1551990756924</millis>
+  <nanos>573000</nanos>
+  <sequence>3</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Fiat-500 ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.925839Z</date>
+  <millis>1551990756925</millis>
+  <nanos>839000</nanos>
+  <sequence>4</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>New Holland-T4.75 ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.927082Z</date>
+  <millis>1551990756927</millis>
+  <nanos>82000</nanos>
+  <sequence>5</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>John Deere-3303R ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.928270Z</date>
+  <millis>1551990756928</millis>
+  <nanos>270000</nanos>
+  <sequence>6</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Cat-906M ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.929431Z</date>
+  <millis>1551990756929</millis>
+  <nanos>431000</nanos>
+  <sequence>7</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Cat-880T ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.933080Z</date>
+  <millis>1551990756933</millis>
+  <nanos>80000</nanos>
+  <sequence>8</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Kubota-B3300 ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.934224Z</date>
+  <millis>1551990756934</millis>
+  <nanos>224000</nanos>
+  <sequence>9</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Fiat-920 ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.935396Z</date>
+  <millis>1551990756935</millis>
+  <nanos>396000</nanos>
+  <sequence>10</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorTaxation</class>
+  <method>add</method>
+  <thread>1</thread>
+  <message>Cat-450P ---- Tax calculated and stored successfully</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.961069Z</date>
+  <millis>1551990756961</millis>
+  <nanos>69000</nanos>
+  <sequence>11</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>INFO</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>&lt;init&gt;</method>
+  <thread>1</thread>
+  <message>TractorIO class constructed.</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.981627Z</date>
+  <millis>1551990756981</millis>
+  <nanos>627000</nanos>
+  <sequence>12</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>SEVERE</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>WriteTextFile</method>
+  <thread>1</thread>
+  <message>./assign4/src/edu/neu/csye6200/tractor/output/tr.txt (No such file or directory)</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.983770Z</date>
+  <millis>1551990756983</millis>
+  <nanos>770000</nanos>
+  <sequence>13</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>WARNING</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>ReadTextFile</method>
+  <thread>1</thread>
+  <message>tr.txt does not exist. Reading failed.</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.986093Z</date>
+  <millis>1551990756986</millis>
+  <nanos>93000</nanos>
+  <sequence>14</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>SEVERE</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>Save</method>
+  <thread>1</thread>
+  <message>./assign4/src/edu/neu/csye6200/tractor/output/re.ser (No such file or directory)</message>
+</record>
+<record>
+  <date>2019-03-07T20:32:36.988736Z</date>
+  <millis>1551990756988</millis>
+  <nanos>736000</nanos>
+  <sequence>15</sequence>
+  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <level>SEVERE</level>
+  <class>edu.neu.csye6200.tractor.TractorIO</class>
+  <method>Load</method>
+  <thread>1</thread>
+  <message>./assign4/src/edu/neu/csye6200/tractor/output/re.ser (No such file or directory)</message>
+</record>
+</log>

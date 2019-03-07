@@ -1,0 +1,142 @@
+/usr/lib/jvm/jdk-11.0.2/bin/java -javaagent:/home/paul/Documents/idea-IU-183.5429.30/lib/idea_rt.jar=46129:/home/paul/Documents/idea-IU-183.5429.30/bin -Dfile.encoding=UTF-8 -classpath /home/paul/IdeaProjects/CSYE6200-Concpts-of-Object-Oriented-Design/out/production/assign4 edu.neu.csye6200.tractor.TractorTest
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation getInstance
+INFO: TractorTaxation class has been constructed
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Kubota-B2320 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Ford-1920 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Fiat-500 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: New Holland-T4.75 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: John Deere-3303R ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Cat-906M ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Cat-880T ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Kubota-B3300 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Fiat-920 ---- Tax calculated and stored successfully
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorTaxation add
+INFO: Cat-450P ---- Tax calculated and stored successfully
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+             Kubota             B2320           0            Paul            16.0k              650
+               Ford              1920           1           James            13.0k              450
+               Fiat               500           2            Mark             5.0k              125
+        New Holland             T4.75           3             Mia            39.0k             2950
+         John Deere             3303R           4         Unknown            29.9k             2040
+                Cat              906M           5            Mark            90.0k             8050
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B3300           7            Paul            18.9k              940
+               Fiat               920           8           James            29.0k             1950
+                Cat              450P           9         Unknown            26.5k             1700
+
+********************************************************************************************************************************
+
+
+
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+               Fiat               500           2            Mark             5.0k              125
+               Ford              1920           1           James            13.0k              450
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B2320           0            Paul            16.0k              650
+             Kubota             B3300           7            Paul            18.9k              940
+                Cat              450P           9         Unknown            26.5k             1700
+               Fiat               920           8           James            29.0k             1950
+         John Deere             3303R           4         Unknown            29.9k             2040
+        New Holland             T4.75           3             Mia            39.0k             2950
+                Cat              906M           5            Mark            90.0k             8050
+
+********************************************************************************************************************************
+
+
+
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+               Ford              1920           1           James            13.0k              450
+               Fiat               920           8           James            29.0k             1950
+               Fiat               500           2            Mark             5.0k              125
+                Cat              906M           5            Mark            90.0k             8050
+        New Holland             T4.75           3             Mia            39.0k             2950
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B2320           0            Paul            16.0k              650
+             Kubota             B3300           7            Paul            18.9k              940
+         John Deere             3303R           4         Unknown            29.9k             2040
+                Cat              450P           9         Unknown            26.5k             1700
+
+********************************************************************************************************************************
+
+
+
+*******************************************************     TAX FORM     *******************************************************
+
+                Make            Model          ID           Owner          Price(k)           Tax($)                             
+
+             Kubota             B2320           0            Paul            16.0k              650
+               Ford              1920           1           James            13.0k              450
+               Fiat               500           2            Mark             5.0k              125
+        New Holland             T4.75           3             Mia            39.0k             2950
+         John Deere             3303R           4         Unknown            29.9k             2040
+                Cat              906M           5            Mark            90.0k             8050
+                Cat              880T           6             Mia            14.5k              525
+             Kubota             B3300           7            Paul            18.9k              940
+               Fiat               920           8           James            29.0k             1950
+                Cat              450P           9         Unknown            26.5k             1700
+
+********************************************************************************************************************************
+
+
+
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorIO <init>
+INFO: TractorIO class constructed.
+java.io.FileNotFoundException: ./assign4/src/edu/neu/csye6200/tractor/output/tr.txt (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:158)
+	at java.base/java.io.FileWriter.<init>(FileWriter.java:82)
+	at edu.neu.csye6200.tractor.TractorIO.WriteTextFile(TractorIO.java:59)
+	at edu.neu.csye6200.tractor.TractorTest.run(TractorTest.java:66)
+	at edu.neu.csye6200.tractor.TractorTest.main(TractorTest.java:76)
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorIO WriteTextFile
+SEVERE: ./assign4/src/edu/neu/csye6200/tractor/output/tr.txt (No such file or directory)
+File does not exist. Quitting
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorIO ReadTextFile
+WARNING: tr.txt does not exist. Reading failed.
+java.io.FileNotFoundException: ./assign4/src/edu/neu/csye6200/tractor/output/re.ser (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:126)
+	at edu.neu.csye6200.tractor.TractorIO.Save(TractorIO.java:121)
+	at edu.neu.csye6200.tractor.TractorTest.run(TractorTest.java:70)
+	at edu.neu.csye6200.tractor.TractorTest.main(TractorTest.java:76)
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorIO Save
+SEVERE: ./assign4/src/edu/neu/csye6200/tractor/output/re.ser (No such file or directory)
+java.io.FileNotFoundException: ./assign4/src/edu/neu/csye6200/tractor/output/re.ser (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at edu.neu.csye6200.tractor.TractorIO.Load(TractorIO.java:141)
+	at edu.neu.csye6200.tractor.TractorTest.run(TractorTest.java:71)
+	at edu.neu.csye6200.tractor.TractorTest.main(TractorTest.java:76)
+Mar 07, 2019 3:41:16 PM edu.neu.csye6200.tractor.TractorIO Load
+SEVERE: ./assign4/src/edu/neu/csye6200/tractor/output/re.ser (No such file or directory)
+The tractor list is empty
+
+
+
+
+Process finished with exit code 0
+
