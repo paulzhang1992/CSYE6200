@@ -3,7 +3,6 @@ package edu.neu.csye6200.tractor; /**
  *
  */
 
-import javax.imageio.IIOException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.FileHandler;
@@ -17,6 +16,7 @@ public class TractorTaxation {
     private double taxRate3;
     private double taxRate4;
     private ArrayList<Tractor> tractorTax;
+    private static String pattern = "./assign4/src/edu/neu/csye6200/tractor/log/tax.log";
 
     private TractorTaxation() {
         taxRate1 = 25; // 25 dollars per 1000 value
@@ -30,7 +30,7 @@ public class TractorTaxation {
         if (instance == null) {
             instance = new TractorTaxation();
             try {
-                log.addHandler(new FileHandler("/assign4/src/edu/neu/csye6200/tractor/log/tax.log"));
+                log.addHandler(new FileHandler(pattern));
                 log.info("TractorTaxation class has been constructed");
             }catch (IOException e) {
                 e.printStackTrace();
@@ -63,7 +63,7 @@ public class TractorTaxation {
         tr.setTax(estTAX(tr));
         tractorTax.add(tr);
         try {
-            log.addHandler(new FileHandler("/assign4/src/edu/neu/csye6200/tractor/log/tax.log"));
+            log.addHandler(new FileHandler(pattern));
             log.info(tr.getMake()+"-"+tr.getModel()+" ---- Tax calculated and stored successfully");
         }catch (IOException e) {
             e.printStackTrace();
