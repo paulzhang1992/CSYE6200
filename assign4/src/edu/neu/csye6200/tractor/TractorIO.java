@@ -1,31 +1,18 @@
 package edu.neu.csye6200.tractor;
 
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class TractorIO {
     public String path;
     public String fileName;
-    private static Logger log = Logger.getLogger(TractorTaxation.class.getName());
-    private static String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SS").format( new Date() );
-    private static String pattern = "./assign4/src/edu/neu/csye6200/tractor/log/IO_"+timeStamp+".log";
-    private static FileHandler fh;
+    private static Logger log = Logger.getLogger(TractorIO.class.getName());
 
-    static {
-        try {
-            fh = new FileHandler(pattern);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     public TractorIO(String fileName) {
         this.path = "./assign4/src/edu/neu/csye6200/tractor/output/";
+        //this.path = "./assign4/src/edu/neu/csye6200/tractor/output/error/";
         this.fileName = fileName;
-        log.addHandler(fh);
         log.info("TractorIO class constructed.");
     }
 

@@ -3,11 +3,8 @@ package edu.neu.csye6200.tractor; /**
  *
  */
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
+
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
 public class TractorTaxation {
@@ -18,17 +15,7 @@ public class TractorTaxation {
     private double taxRate3;
     private double taxRate4;
     private ArrayList<Tractor> tractorTax;
-    private static String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SS").format( new Date() );
-    private static String pattern = "./assign4/src/edu/neu/csye6200/tractor/log/tax_"+timeStamp+".log";
-    private static FileHandler fh;
 
-    static {
-        try {
-            fh = new FileHandler(pattern);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     private TractorTaxation(){
         taxRate1 = 25; // 25 dollars per 1000 value
@@ -41,7 +28,6 @@ public class TractorTaxation {
     public static TractorTaxation getInstance(){
         if (instance == null) {
             instance = new TractorTaxation();
-            log.addHandler(fh);
             log.info("TractorTaxation class has been constructed");
 
         }

@@ -1,29 +1,29 @@
-/usr/lib/jvm/jdk-11.0.2/bin/java -javaagent:/home/paul/Documents/idea-IU-183.5429.30/lib/idea_rt.jar=35215:/home/paul/Documents/idea-IU-183.5429.30/bin -Dfile.encoding=UTF-8 -classpath /home/paul/IdeaProjects/CSYE6200-Concpts-of-Object-Oriented-Design/out/production/assign4 edu.neu.csye6200.tractor.TractorTest
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation getInstance
+/usr/lib/jvm/jdk-11.0.2/bin/java -javaagent:/home/paul/Documents/idea-IU-183.5429.30/lib/idea_rt.jar=45909:/home/paul/Documents/idea-IU-183.5429.30/bin -Dfile.encoding=UTF-8 -classpath /home/paul/IdeaProjects/CSYE6200-Concpts-of-Object-Oriented-Design/out/production/assign4 edu.neu.csye6200.tractor.TractorTest
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation getInstance
 INFO: TractorTaxation class has been constructed
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Kubota-B2320 ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Ford-1920 ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Fiat-500 ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: New Holland-T4.75 ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: John Deere-3303R ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Cat-906M ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Cat-880T ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Kubota-B3300 ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Fiat-920 ---- Tax calculated and stored successfully
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorTaxation add
+Mar 12, 2019 1:03:27 PM edu.neu.csye6200.tractor.TractorTaxation add
 INFO: Cat-450P ---- Tax calculated and stored successfully
 *******************************************************     TAX FORM     *******************************************************
 
-                Make            Model          ID           Owner          Price(k)           Tax($)                             
+                Make            Model          ID           Owner          Price(k)           Tax($)
 
              Kubota             B2320           0            Paul            16.0k              650
                Ford              1920           1           James            13.0k              450
@@ -42,7 +42,7 @@ INFO: Cat-450P ---- Tax calculated and stored successfully
 
 *******************************************************     TAX FORM     *******************************************************
 
-                Make            Model          ID           Owner          Price(k)           Tax($)                             
+                Make            Model          ID           Owner          Price(k)           Tax($)
 
                Fiat               500           2            Mark             5.0k              125
                Ford              1920           1           James            13.0k              450
@@ -61,7 +61,7 @@ INFO: Cat-450P ---- Tax calculated and stored successfully
 
 *******************************************************     TAX FORM     *******************************************************
 
-                Make            Model          ID           Owner          Price(k)           Tax($)                             
+                Make            Model          ID           Owner          Price(k)           Tax($)
 
                Ford              1920           1           James            13.0k              450
                Fiat               920           8           James            29.0k             1950
@@ -80,7 +80,7 @@ INFO: Cat-450P ---- Tax calculated and stored successfully
 
 *******************************************************     TAX FORM     *******************************************************
 
-                Make            Model          ID           Owner          Price(k)           Tax($)                             
+                Make            Model          ID           Owner          Price(k)           Tax($)
 
              Kubota             B2320           0            Paul            16.0k              650
                Ford              1920           1           James            13.0k              450
@@ -97,37 +97,37 @@ INFO: Cat-450P ---- Tax calculated and stored successfully
 
 
 
-Mar 07, 2019 3:36:32 PM edu.neu.csye6200.tractor.TractorIO <init>
+Mar 12, 2019 1:03:28 PM edu.neu.csye6200.tractor.TractorIO <init>
 INFO: TractorIO class constructed.
-Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO WriteTextFile
+Mar 12, 2019 1:03:28 PM edu.neu.csye6200.tractor.TractorIO WriteTextFile
 INFO: class java.util.ArrayList saved to file tr.txt successfully.
-Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO ReadTextFile
+Mar 12, 2019 1:03:28 PM edu.neu.csye6200.tractor.TractorIO ReadTextFile
 INFO: tr.txt has been successfully read.
 Array list serialized as re.ser
-Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO Save
+Mar 12, 2019 1:03:28 PM edu.neu.csye6200.tractor.TractorIO Save
 INFO: Serialization completed
-Mar 07, 2019 3:36:33 PM edu.neu.csye6200.tractor.TractorIO Load
+Mar 12, 2019 1:03:28 PM edu.neu.csye6200.tractor.TractorIO Load
 INFO: Deserialization completed
 ********************************************************************     TRACTOR LIST     ********************************************************************
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
-      Kubota   B2320    17.2       diesel          26.1         23.5          4.40           103.36   16.0k     0         Paul 
+      Kubota   B2320    17.2       diesel          26.1         23.5          4.40           103.36   16.0k     0         Paul
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
-        Ford    1920    24.8       diesel          37.1         18.0          3.20            57.60   13.0k     1        James 
+        Ford    1920    24.8       diesel          37.1         18.0          3.20            57.60   13.0k     1        James
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
-        Fiat     500    37.3       diesel          54.1         54.1          2.70           146.07    5.0k     2         Mark 
+        Fiat     500    37.3       diesel          54.1         54.1          2.70           146.07    5.0k     2         Mark
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
- New Holland   T4.75    55.2       diesel          90.1         18.0          3.80            68.40   39.0k     3          Mia 
+ New Holland   T4.75    55.2       diesel          90.1         18.0          3.80            68.40   39.0k     3          Mia
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
-  John Deere   3303R    24.6       diesel          44.7         44.7          5.20           232.44   29.9k     4      Unknown 
+  John Deere   3303R    24.6       diesel          44.7         44.7          5.20           232.44   29.9k     4      Unknown
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner     Loader Width    Loader Cap
@@ -139,11 +139,11 @@ INFO: Deserialization completed
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
-      Kubota   B3300    19.8       diesel          40.0         36.0          4.00           144.00   18.9k     7         Paul 
+      Kubota   B3300    19.8       diesel          40.0         36.0          4.00           144.00   18.9k     7         Paul
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner
-        Fiat     920    26.7       diesel          55.0         18.0          3.90            70.20   29.0k     8        James 
+        Fiat     920    26.7       diesel          55.0         18.0          3.90            70.20   29.0k     8        James
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Make       Model    Power    Fuel Type      Fuel Cap     Fuel Load    Fuel Efficiency     Range   Price     ID       Owner     Loader Width    Loader Cap
@@ -157,4 +157,3 @@ INFO: Deserialization completed
 
 
 Process finished with exit code 0
-

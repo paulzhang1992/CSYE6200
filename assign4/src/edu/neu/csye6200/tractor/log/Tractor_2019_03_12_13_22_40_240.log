@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2019-03-07T20:36:32.646522Z</date>
-  <millis>1551990992646</millis>
-  <nanos>522000</nanos>
+  <date>2019-03-12T17:22:40.324749Z</date>
+  <millis>1552411360324</millis>
+  <nanos>749000</nanos>
   <sequence>0</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -14,9 +14,9 @@
   <message>TractorTaxation class has been constructed</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.714866Z</date>
-  <millis>1551990992714</millis>
-  <nanos>866000</nanos>
+  <date>2019-03-12T17:22:40.410406Z</date>
+  <millis>1552411360410</millis>
+  <nanos>406000</nanos>
   <sequence>1</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -26,9 +26,9 @@
   <message>Kubota-B2320 ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.716171Z</date>
-  <millis>1551990992716</millis>
-  <nanos>171000</nanos>
+  <date>2019-03-12T17:22:40.411638Z</date>
+  <millis>1552411360411</millis>
+  <nanos>638000</nanos>
   <sequence>2</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -38,9 +38,9 @@
   <message>Ford-1920 ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.717359Z</date>
-  <millis>1551990992717</millis>
-  <nanos>359000</nanos>
+  <date>2019-03-12T17:22:40.414254Z</date>
+  <millis>1552411360414</millis>
+  <nanos>254000</nanos>
   <sequence>3</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -50,9 +50,9 @@
   <message>Fiat-500 ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.718524Z</date>
-  <millis>1551990992718</millis>
-  <nanos>524000</nanos>
+  <date>2019-03-12T17:22:40.416760Z</date>
+  <millis>1552411360416</millis>
+  <nanos>760000</nanos>
   <sequence>4</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -62,9 +62,9 @@
   <message>New Holland-T4.75 ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.719729Z</date>
-  <millis>1551990992719</millis>
-  <nanos>729000</nanos>
+  <date>2019-03-12T17:22:40.419256Z</date>
+  <millis>1552411360419</millis>
+  <nanos>256000</nanos>
   <sequence>5</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -74,9 +74,9 @@
   <message>John Deere-3303R ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.720931Z</date>
-  <millis>1551990992720</millis>
-  <nanos>931000</nanos>
+  <date>2019-03-12T17:22:40.420429Z</date>
+  <millis>1552411360420</millis>
+  <nanos>429000</nanos>
   <sequence>6</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -86,9 +86,9 @@
   <message>Cat-906M ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.722066Z</date>
-  <millis>1551990992722</millis>
-  <nanos>66000</nanos>
+  <date>2019-03-12T17:22:40.421567Z</date>
+  <millis>1552411360421</millis>
+  <nanos>567000</nanos>
   <sequence>7</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -98,9 +98,9 @@
   <message>Cat-880T ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.723283Z</date>
-  <millis>1551990992723</millis>
-  <nanos>283000</nanos>
+  <date>2019-03-12T17:22:40.423585Z</date>
+  <millis>1552411360423</millis>
+  <nanos>585000</nanos>
   <sequence>8</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -110,9 +110,9 @@
   <message>Kubota-B3300 ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.724459Z</date>
-  <millis>1551990992724</millis>
-  <nanos>459000</nanos>
+  <date>2019-03-12T17:22:40.433947Z</date>
+  <millis>1552411360433</millis>
+  <nanos>947000</nanos>
   <sequence>9</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -122,9 +122,9 @@
   <message>Fiat-920 ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.725718Z</date>
-  <millis>1551990992725</millis>
-  <nanos>718000</nanos>
+  <date>2019-03-12T17:22:40.441933Z</date>
+  <millis>1552411360441</millis>
+  <nanos>933000</nanos>
   <sequence>10</sequence>
   <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
   <level>INFO</level>
@@ -134,11 +134,11 @@
   <message>Cat-450P ---- Tax calculated and stored successfully</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:32.751713Z</date>
-  <millis>1551990992751</millis>
-  <nanos>713000</nanos>
+  <date>2019-03-12T17:22:40.459633Z</date>
+  <millis>1552411360459</millis>
+  <nanos>633000</nanos>
   <sequence>11</sequence>
-  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
+  <logger>edu.neu.csye6200.tractor.TractorIO</logger>
   <level>INFO</level>
   <class>edu.neu.csye6200.tractor.TractorIO</class>
   <method>&lt;init&gt;</method>
@@ -146,51 +146,51 @@
   <message>TractorIO class constructed.</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:33.089801Z</date>
-  <millis>1551990993089</millis>
-  <nanos>801000</nanos>
+  <date>2019-03-12T17:22:40.480299Z</date>
+  <millis>1552411360480</millis>
+  <nanos>299000</nanos>
   <sequence>12</sequence>
-  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
-  <level>INFO</level>
+  <logger>edu.neu.csye6200.tractor.TractorIO</logger>
+  <level>SEVERE</level>
   <class>edu.neu.csye6200.tractor.TractorIO</class>
   <method>WriteTextFile</method>
   <thread>1</thread>
-  <message>class java.util.ArrayList saved to file tr.txt successfully.</message>
+  <message>./assign4/src/edu/neu/csye6200/tractor/output/error/tr.txt (No such file or directory)</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:33.093237Z</date>
-  <millis>1551990993093</millis>
-  <nanos>237000</nanos>
+  <date>2019-03-12T17:22:40.481714Z</date>
+  <millis>1552411360481</millis>
+  <nanos>714000</nanos>
   <sequence>13</sequence>
-  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
-  <level>INFO</level>
+  <logger>edu.neu.csye6200.tractor.TractorIO</logger>
+  <level>WARNING</level>
   <class>edu.neu.csye6200.tractor.TractorIO</class>
   <method>ReadTextFile</method>
   <thread>1</thread>
-  <message>tr.txt has been successfully read.</message>
+  <message>tr.txt does not exist. Reading failed.</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:33.182881Z</date>
-  <millis>1551990993182</millis>
-  <nanos>881000</nanos>
+  <date>2019-03-12T17:22:40.483505Z</date>
+  <millis>1552411360483</millis>
+  <nanos>505000</nanos>
   <sequence>14</sequence>
-  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
-  <level>INFO</level>
+  <logger>edu.neu.csye6200.tractor.TractorIO</logger>
+  <level>SEVERE</level>
   <class>edu.neu.csye6200.tractor.TractorIO</class>
   <method>Save</method>
   <thread>1</thread>
-  <message>Serialization completed</message>
+  <message>./assign4/src/edu/neu/csye6200/tractor/output/error/re.ser (No such file or directory)</message>
 </record>
 <record>
-  <date>2019-03-07T20:36:33.206602Z</date>
-  <millis>1551990993206</millis>
-  <nanos>602000</nanos>
+  <date>2019-03-12T17:22:40.485362Z</date>
+  <millis>1552411360485</millis>
+  <nanos>362000</nanos>
   <sequence>15</sequence>
-  <logger>edu.neu.csye6200.tractor.TractorTaxation</logger>
-  <level>INFO</level>
+  <logger>edu.neu.csye6200.tractor.TractorIO</logger>
+  <level>SEVERE</level>
   <class>edu.neu.csye6200.tractor.TractorIO</class>
   <method>Load</method>
   <thread>1</thread>
-  <message>Deserialization completed</message>
+  <message>./assign4/src/edu/neu/csye6200/tractor/output/error/re.ser (No such file or directory)</message>
 </record>
 </log>

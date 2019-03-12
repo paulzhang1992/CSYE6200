@@ -1,5 +1,12 @@
 package edu.neu.csye6200.tractor;
 
+import javax.security.auth.login.LoginContext;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+
 public class TractorTest {
     public TractorTest() {
     }
@@ -7,6 +14,24 @@ public class TractorTest {
 
     // Doo works here
     private void run(){
+        String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss_SS").format( new Date() );
+        String pattern = "./assign4/src/edu/neu/csye6200/tractor/log/Tractor_"+timeStamp+".log";
+        FileHandler fh = null;
+        //Logger log = Logger.getLogger(TractorTest.class.getName());
+        Logger logTax = Logger.getLogger(TractorTaxation.class.getName());
+        Logger logIO = Logger.getLogger(TractorIO.class.getName());
+
+
+        try {
+            fh = new FileHandler(pattern);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //log.addHandler(fh);
+
+        logTax.addHandler(fh);
+        logIO.addHandler(fh);
+
         // Use tractor generator to creat 7 instances of default instances
         TractorTaxation trTax = TractorTaxation.getInstance();
         DefaultTractorList tl = DefaultTractorList.getInstance();
