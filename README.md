@@ -1,1 +1,1 @@
-# CSYE6200-Concpts-of-Object-Oriented-Design
+# CSYE6200
